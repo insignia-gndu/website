@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insignia - Intercollege Event</title>
+    <link rel="shortcut icon" href="assets/images/final-logo.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+         a {
+            margin-inline: 14px;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            text-align: center;
+            overflow-x: hidden;
+        }
+      header{
+        font-family: 'Times New Roman', Times, serif;
+        
+      }
+
+        .navbar-brand img {
+            max-height: 100px;
+        }
+      /* for navbar */
+       .container {
+            max-width: 100%;
+            max-height: auto;
+            margin: 0 auto;
+             padding: 10px;
+        }
+
+        .event-description {
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            max-width: 80%;
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 24px;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.7); 
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .image-slider {
+            width: 100%;
+            height: auto; 
+            max-height: 80vh; 
+            overflow: hidden;
+        }
+
+        .slider-content {
+            display: flex;
+            animation: slide 20s infinite;
+        }
+
+        .slider-content img {
+            width: 100vw;
+            height: 80vh;
+            object-fit: cover;
+        }
+       h2{
+        font-family: 'Times New Roman', Times, serif;
+       }
+
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            20% { transform: translateX(-100%); }
+            40% { transform: translateX(-200%); }
+            60% { transform: translateX(-300%); }
+            80% { transform: translateX(-400%); }
+            100% { transform: translateX(-500%); }
+        }
+        @media (min-width: 300px) and (max-width: 795px) {
+        
+            .event-description {
+                top: 90%; 
+                width: 90%; 
+                font-size: 18px;
+            }
+            .container {
+                width: 90%; 
+               
+            }
+         #left {
+           margin-left: -35%;
+        }
+    
+        #right {
+           margin-right:-35%;
+        }
+        }
+        @media  (min-width: 800px) and (max-width: 1280px){
+
+            #left {
+           margin-left: -20%;
+        }
+    
+        #right {
+           margin-right:-20%;
+        }
+        }
+        
+        .event-card {
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+        }
+
+        .event-card img {
+            max-width: 100%;
+            height: auto;
+        }
+        .card:hover {
+            transition: transform 0.2s ease;
+            transform: scale(1.05);    
+        }
+   
+    .trophy-img {
+            max-width: 50px;
+        }
+       
+        .trophy-decoration {
+            position: absolute;
+            top: 2%;
+            
+        }
+    
+        .left {
+            left: 30%;
+        }
+    
+        .right {
+            right: 30%;
+        }
+       
+  .eventp{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+#title-sponsors {
+    background-color: #f8f8f8;
+    padding: 40px 0;
+}
+
+.sponsor-card {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sponsor-card:hover {
+    transform: scale(1.05);
+}
+
+
+.square-box:hover {
+    transform: scale(1.05);
+}
+.square-box {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.square-box .btn {
+    color: #000;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid transparent;
+    border-image: linear-gradient(to bottom, #4e4eb6, #952fb5);
+    border-image-slice: 1;
+    flex-grow: 1;
+   
+}
+
+.square-box .btn:hover {
+    background-color: #4e4eb6;
+    color: #fff;
+}
+@media (min-width: 770px) and (max-width: 1195px) {
+        
+    .square-box {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    margin-bottom: 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <div class="navbar-collapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Our Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Competitions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">TechFest Insights</a>
+                        </li>
+                    </ul>
+                    <a class="navbar-brand mx-auto" href="#">
+                        <img src="assets/images/final-logo.png" alt="Insignia Logo">
+                    </a>
+                    <ul class="navbar-nav ml-auto">
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Registrations</a>
+                        </li>
+                       
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Our Sponsors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="event-description">
+        
+        <p>
+             INSIGNIA’ 2023<br><br>
+            INSIGNIA is the ultimate Inter-Institute event for showcasing your skills and having fun. Our range of technical and cultural events along with expert photography, exciting prizes, and  electrifying beats of our DJ  guarantee an unforgettable experience.
+        </p>
+    </div>
+
+    <div class="image-slider">
+        <div class="slider-content">
+            <img src="assets/images/avishkar.jpg" alt="img-1">
+            <img src="assets/images/g.dance.jpg" alt="img-2">
+            <img src="assets/images/comedy.jpg" alt="img-3">
+            <img src="assets/images/electro-hunt.jpg" alt="img-4">
+            <img src="assets/images/code.jpg" alt="img-5">
+            <img src="assets/images/website.jpg" alt="img-6">
+            <img src="assets/images/computer-competiton.jpg" alt="img-7">
+            <img src="assets/images/fashion.jpg" alt="img-8">
+            <img src="assets/images/reels.jpg" alt="img-10">
+            <img src="assets/images/cinematography.jpg" alt="img-12">
+            <img src="assets/images/photography.jpg" alt="img-13">
+            <img src="assets/images/mobile-gaming.jpg" alt="img-9">
+            <img src="assets/images/dance.jpg" alt="img-14">
+            <img src="assets/images/ingniapic.jpg" alt="img-15">
+           
+           
+        </div>
+    </div>
+<br>
+<div id="title-sponsors" class="container mt-5">
+    <h2 class="text-center mb-4">TITLE SPONSOR</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="sponsor-card">
+                <img src="assets/images/qm.png" alt="Title Sponsor" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<header>
+    <h1 class="text-center">Exciting Events!</h1>
+</header>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card">
+                <img src="assets/images/technical-event.jpg" class="card-img-top" alt="Technical Events">
+                <div class="card-body">
+                    <h2 class="card-title">Technical Events</h2>
+                    <p class="card-text">Prepare yourself for a series of thrilling technological challenges that will put your knowledge to the test. Experience an unforgettable event with us!</p>
+                    <div class="square-box">
+                        <a href="#technical-events" class="btn btn-small">Explore</a>
+                        <a href="#registration-technical" class="btn btn-small">Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card">
+                <img src="assets/images/cultural-event.jpg" class="card-img-top" alt="Cultural Events">
+                <div class="card-body">
+                    <h2 class="card-title">Cultural Events</h2>
+                    <p class="card-text">Experience the magic of art, music, and talent in our Cultural Events. It's a celebration of creativity, where traditions meet modernity.</p>
+                    <div class="square-box">
+                        <a href="#cultural-events" class="btn btn-small">Explore</a>
+                        <a href="#registration-cultural" class="btn btn-small">Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card">
+                <img src="assets/images/fun-activity1.jpg" class="card-img-top" alt="Fun Activities">
+                <div class="card-body">
+                    <h2 class="card-title">Fun Activities</h2>
+                    <p class="card-text">Join the adventure in our Fun Activities, from treasure hunts to box cricket. It's all about having a blast and making memories!</p>
+                    <div class="square-box">
+                        <a href="#fun-activities" class="btn btn-small">Explore</a>
+                        <a href="#registration-fun" class="btn btn-small">Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+    <div class="container mt-4" id="talent">
+        <header class="text-center mb-4 position-relative">
+           
+            <div class="trophy-decoration left" id="left">
+                <img src="assets/images/trophy.gif" alt="Trophy" class="img-fluid trophy-img">
+            </div>
+    
+            <h1 class="mt-0">Unleash Your Talent!</h1>
+            <h5>Do you have a hidden talent waiting to be discovered?</h5>
+    
+           
+            <div class="trophy-decoration right" id="right">
+                <img src="assets/images/trophy.gif" alt="Trophy" class="img-fluid trophy-img">
+            </div>
+        </header>
+    
+        <div class="row">
+           
+            <div class="col-md-8 offset-md-2 text-center">
+                <div class="talent">
+                    <ul class="text-left">
+                        <li>Join us at Insignia 2023 and let your skills shine! Whether you're an aspiring artist, a tech genius, or a passionate performer, we have the perfect platform for you to showcase your talents. Our events are designed to bring out the best in you and provide a stage where you can leave a mark.</li>
+                        <li>Don't miss this opportunity to unleash your creativity, connect with like-minded individuals, and be part of an unforgettable experience. Join us at Insignia and make your mark in the world of talent and innovation!</li>
+                    </ul>
+                    <a href="#registration-section" class="btn btn-primary mt-3">Register Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-4" id="about-us">
+        <header class="text-center mb-4">
+            <h1>About Us</h1>
+            <h5>Discover who we are and our mission.</h5>
+        </header>
+    
+        <div class="row">
+            <div class="col-md-8 offset-md-2 text-center">
+                <div class="about-us-content">
+                    <div class="accordion" id="aboutUsAccordion">
+                        <div class="card">
+                            <div class="card-header" id="teamHeading">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#teamCollapse" aria-expanded="true" aria-controls="teamCollapse">
+                                         About Our Team
+                                    </button>
+                                </h2>
+                            </div>
+    
+                            <div id="teamCollapse" class="collapse show" aria-labelledby="teamHeading" data-parent="#aboutUsAccordion">
+                                <div class="card-body">
+                                    <img src="assets/images/fashion.jpg" alt="Our Team" class="img-fluid rounded-circle mb-3" width="350" height="350">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fringilla tincidunt risus, ac blandit elit tempor vel. Nullam bibendum ex in mauris laoreet, sit amet pulvinar sapien sollicitudin.</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                       
+                        <div class="card">
+                            <div class="card-header" id="missionHeading">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#missionCollapse" aria-expanded="false" aria-controls="missionCollapse">
+                                     Our Mission
+                                    </button>
+                                </h2>
+                            </div>
+    
+                            <div id="missionCollapse" class="collapse" aria-labelledby="missionHeading" data-parent="#aboutUsAccordion">
+                                <div class="card-body">
+                                    
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fringilla tincidunt risus, ac blandit elit tempor vel. Nullam bibendum ex in mauris laoreet, sit amet pulvinar sapien sollicitudin.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <footer class="bg-light text-center p-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <h3>Contact Us</h3>
+              <p>If you have any questions or inquiries, feel free to get in touch with us.</p>
+              <p>Email: <a href="mailto:insignia@gmail">Insignia@gmail.com</a></p>
+              <p>Phone: +91 ......</p>
+              <p>Address:  University Road, Ladhewali, Jalandhar, Punjab 144007</p>
+            </div>
+            <div class="col-lg-6">
+                <h2>Visit Us</h2>
+                <p>Find us on the map:</p>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe src="https://www.google.com/maps/place/Guru+Nanak+Dev+University,+Regional+Campus,+Jalandhar/@31.3335926,75.62112,17z/data=!3m1!4b1!4m6!3m5!1s0x391a598afff01ab1:0x4d676314655e801!8m2!3d31.333588!4d75.6236949!16s%2Fg%2F1vfwb6v8?entry=ttu" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+        </div>
+            
+      </footer>
+    
+    
+    
+    
+    
+   
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
