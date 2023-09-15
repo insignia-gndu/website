@@ -103,7 +103,7 @@ header {
 }
 
 .nav-link:hover {
-  color: #e2edff;
+  color: #fefeff;
   text-align: center;
   animation: glow 1s ease-in-out infinite alternate;
 }
