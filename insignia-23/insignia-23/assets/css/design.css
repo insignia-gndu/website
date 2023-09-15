@@ -70,48 +70,209 @@ html {
 
   /* 10px / 16px = 0.625 = 62.5% */
   /* Percentage of user's browser font-size setting */
-  font-size: 62.5%;
   /* overflow-x: hidden; */
 
   /* Does NOT work on Safari */
-  /* scroll-behavior: smooth; */
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: hsla(203, 100%, 99%, 1);
 }
 
 .svg-icons {
-  height: 3rem;
-  display: block;
-  margin: auto;
+  height: 2rem;
 }
 
 .nav-link {
   transition: all 0.3s;
+  color: rgb(49, 101, 139);
+  background-color: transparent;
 }
 
 .nav-link:hover {
-  color: #292f5a;
+  color: #60a0ff;
   text-align: center;
   animation: glow 1s ease-in-out infinite alternate;
 }
 
 @-webkit-keyframes glow {
   from {
-    text-shadow: 0 0 10px #dceeff, 0 0 20px #dceeff, 0 0 30px rgb(139, 230, 255),
-      0 0 40px rgb(139, 230, 255), 0 0 50px rgb(139, 230, 255),
-      0 0 60px rgb(139, 230, 255), 0 0 70px rgb(139, 230, 255);
+    text-shadow: 0 0 5px #dceeff, 0 0 10px #dceeff, 0 0 15px rgb(228, 250, 255),
+      0 0 20px rgb(157, 235, 255), 0 0 25px rgb(157, 235, 255),
+      0 0 30px rgb(157, 235, 255), 0 0 35px rgb(157, 235, 255);
   }
 
   to {
-    text-shadow: 0 0 20px #dceeff, 0 0 30px #dceeff, 0 0 40px rgb(235, 212, 254),
-      0 0 50px rgb(235, 212, 254), 0 0 60px rgb(235, 212, 254),
-      0 0 70px rgb(235, 212, 254), 0 0 80px rgb(235, 212, 254);
+    text-shadow: 0 0 10px #dceeff, 0 0 15px #dceeff, 0 0 20px rgb(255, 169, 233),
+      0 0 25px rgb(255, 169, 233), 0 0 30px rgb(255, 169, 233),
+      0 0 35px rgb(255, 169, 233), 0 0 40px rgb(255, 169, 233);
   }
 }
 
 nav {
-  background: linear-gradient();
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* background-color: rgba(86, 86, 86, 0.079); */
+  background: linear-gradient(
+    rgba(86, 86, 86, 0.079) 0%,
+    rgba(86, 86, 86, 0.04) 90%,
+    transparent 100%
+  );
+  /* padding-bottom: 3rem; */
+  height: 7rem;
+  z-index: 100;
+  /* filter: blur(0px); !important */
 }
 
 /* .span-item-text {
   margin-left: auto;
   margin-right: auto;
 } */
+
+.hero-section {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/hero-background-2-blur.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  display: inline-block;
+  position: absolute;
+  left: 8rem;
+  text-align: left;
+  top: calc(50% - 9rem);
+  margin-left: 5rem;
+  width: 35%;
+}
+
+.hero-text h1 {
+  font-family: "Fjalla One", sans-serif;
+  font-size: 5.5rem;
+  color: rgb(49, 101, 139);
+}
+
+.hero-text .year {
+  font-family: "Patua One", cursive;
+}
+
+.hero-text p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.hero-image img {
+  height: 30rem;
+  margin-left: 40rem;
+  margin-top: -1rem;
+  /* box-shadow: 10px 10px 20px rgba(30, 20, 73, 0.263); */
+}
+
+/* .blur-circle {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+crc1 {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  height: 10rem;
+  width: 10rem;
+  border-radius: 70%;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+} */
+
+.floating {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+.mesh-test,
+.hero-section {
+  background-color: hsla(203, 100%, 99%, 1);
+  background-image: radial-gradient(
+      at 97% 11%,
+      hsla(162, 100%, 80%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 65% 0%, hsla(189, 100%, 56%, 1) 0px, transparent 50%),
+    radial-gradient(at 2% 2%, hsla(306, 100%, 92%, 1) 0px, transparent 50%),
+    radial-gradient(at 38% 8%, hsla(242, 100%, 70%, 1) 0px, transparent 50%);
+
+  animation: gradient 13s ease infinite;
+  background-size: 200% 200%;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 20%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 50% 70%;
+  }
+  100% {
+    background-position: 0% 20%;
+  }
+}
+
+.image-slider {
+  width: 90%;
+  height: auto;
+  max-height: 80vh;
+  overflow: hidden;
+  margin: auto;
+  margin-top: 4rem;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px 4px rgba(88, 93, 141, 0.847);
+  position: relative;
+  transition: all 0.3s ease-out;
+}
+.image-slider:hover {
+  transform: scale(1.03);
+}
+
+<!-- HTML !-->
+<button class="button-64" role="button"><span class="text">Button 64</span></button>
+
