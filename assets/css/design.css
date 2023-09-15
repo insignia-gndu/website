@@ -85,6 +85,7 @@ header {
   height: fit-content;
   min-height: fit-content;
   /* overflow-x: hidden; */
+  width: 100%;
 }
 
 .svg-icons {
@@ -126,8 +127,8 @@ nav {
   top: 0;
   left: 0;
   background: linear-gradient(
-    rgba(86, 86, 86, 0.21) 0%,
-    rgba(86, 86, 86, 0.04) 90%,
+    rgba(255, 255, 255, 0.21) 0%,
+    rgba(255, 255, 255, 0.04) 90%,
     transparent 100%
   );
   /* padding-bottom: 3rem; */
@@ -135,14 +136,24 @@ nav {
   z-index: 100;
   /* filter: blur(0px); !important */
   min-height: fit-content;
+  width: 100%;
+}
+.navbar {
+  padding: 0;
 }
 
 .bg-blur {
   height: 100%;
   width: 100%;
   z-index: -10;
-  filter: blur(5px);
+  /* background: rgba(255, 255, 255, 0.178); */
+  backdrop-filter: blur(10px);
   position: absolute;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.43) 0%,
+    rgba(255, 255, 255, 0.166) 90%,
+    transparent 100%
+  );
 }
 
 /* .span-item-text {
@@ -191,50 +202,55 @@ nav {
 .hero-image img {
   height: 30rem;
   margin-left: 40rem;
-  margin-top: -1rem;
+  margin-top: -2rem;
+  margin-bottom: 2rem;
   /* box-shadow: 10px 10px 20px rgba(30, 20, 73, 0.263); */
 }
 
-/* .blur-circle {
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0)
-  );
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+.glassmorph {
+  background: rgba(255, 255, 255, 0.21);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 3px solid rgba(255, 255, 255, 0.3);
 }
 
-crc1 {
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0)
-  );
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  height: 10rem;
-  width: 10rem;
-  border-radius: 70%;
-  display: block;
+.crc1 {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 100;
-} */
+  z-index: 200;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  top: 60%;
+  left: 55%;
+  animation-name: floating;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.crc2 {
+  position: absolute;
+  z-index: 200;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  top: 25%;
+  left: 80%;
+  animation-name: floating;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
 
 .floating {
   animation-name: floating;
-  animation-duration: 3s;
+  animation-duration: 4s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
-  margin-left: 30px;
-  margin-top: 5px;
+  /* margin-left: 30px;
+  margin-top: 5px; */
 }
 
 @keyframes floating {
