@@ -78,15 +78,21 @@ html {
 
 body {
   background-color: hsla(203, 100%, 99%, 1);
+  /* overflow: hidden; */
 }
 
 header {
   height: fit-content;
   min-height: fit-content;
+  /* overflow-x: hidden; */
 }
 
 .svg-icons {
   height: 2rem;
+}
+
+.nav-item {
+  padding: auto;
 }
 
 .nav-link {
@@ -129,6 +135,14 @@ nav {
   z-index: 100;
   /* filter: blur(0px); !important */
   min-height: fit-content;
+}
+
+.bg-blur {
+  height: 100%;
+  width: 100%;
+  z-index: -10;
+  filter: blur(5px);
+  position: absolute;
 }
 
 /* .span-item-text {
@@ -385,7 +399,7 @@ crc1 {
 }
 
 .register-btn span {
-  background-color: rgb(5, 6, 45);
+  background-color: rgb(25, 26, 31);
   padding: 16px 24px;
   border-radius: 6px;
   width: 100%;
@@ -395,4 +409,35 @@ crc1 {
 
 .register-btn:hover span {
   background: none;
+}
+
+footer {
+  background-color: #292540;
+  color: #e2edff;
+  margin-top: 4rem;
+  /* padding-bottom: -px; */
+}
+
+.contact-us-list {
+  list-style: none;
+  /* display: block; */
+}
+
+footer hr {
+  border-color: #dceeff;
+  width: 50%;
+  height: 8px;
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 5rem;
+  border-style: double;
+}
+
+.footer-copy {
+  margin-bottom: -20px;
+  font-size: 12px;
+}
+
+.footer-contact-mail {
+  color: #92f8ff;
 }
