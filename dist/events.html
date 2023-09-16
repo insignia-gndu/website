@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+
+        a {
+            margin-inline: 14px;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        header {
+            font-family: 'Times New Roman', Times, serif;
+
+        }
+
+        header p {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            justify-content: center;
+        }
+
+        .navbar-brand img {
+            max-height: 140px;
+        }
+
+        .container {
+            max-width: 100%;
+            max-height: auto;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        .event-description {
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            max-width: 80%;
+            margin: 0 auto;
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 24px;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .image-slider {
+            width: 100%;
+            height: auto;
+            max-height: 80vh;
+            overflow: hidden;
+        }
+
+        .slider-content {
+            display: flex;
+            animation: slide 20s infinite;
+        }
+
+        .slider-content img {
+            width: 100vw;
+            height: 80vh;
+            object-fit: cover;
+        }
+
+
+
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+
+            20% {
+                transform: translateX(-100%);
+            }
+
+            40% {
+                transform: translateX(-200%);
+            }
+
+            60% {
+                transform: translateX(-300%);
+            }
+
+            80% {
+                transform: translateX(-400%);
+            }
+
+            100% {
+                transform: translateX(-500%);
+            }
+        }
+
+        @media (min-width: 300px) and (max-width: 795px) {
+
+            .event-description {
+                top: 90%;
+                width: 90%;
+                font-size: 18px;
+            }
+
+
+            .container {
+                width: 90%;
+
+            }
+
+            #left {
+                margin-left: -35%;
+            }
+
+            #right {
+                margin-right: -35%;
+            }
+        }
+
+        @media (min-width: 800px) and (max-width: 1280px) {
+
+            #left {
+                margin-left: -20%;
+            }
+
+            #right {
+                margin-right: -20%;
+            }
+        }
+
+        .event-card {
+            flex-basis: calc(33.33% - 20px);
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .event-card img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .card:hover {
+            transition: transform 0.2s ease;
+            transform: scale(0.9);
+
+        }
+
+        .trophy-img {
+            max-width: 50px;
+        }
+
+
+        .trophy-decoration {
+            position: absolute;
+            top: 2%;
+
+        }
+
+        .left {
+            left: 30%;
+        }
+
+        .right {
+            right: 30%;
+        }
+
+        .navbar {
+            background-image: linear-gradient(to bottom, rgb(8, 13, 99), rgb(2, 2, 19));
+            /* height: 120px; */
+            height: 80%;
+            padding: 0.25rem;
+        }
+
+        .color {
+            color: white;
+            /* Set the initial color */
+            transition-duration: 400ms;
+            font-size: 20px;
+        }
+
+        .color:hover {
+            color: gainsboro;
+        }
+
+        /* .nav-item {
+            background-color: rgb(47, 47, 225);
+            transition-duration: 400ms;
+        } */
+
+        /* .nav-item:hover {
+            background-color: rgb(47, 47, 225);
+        } */
+
+        .logo {
+            width: 65%;
+            height: auto;
+            margin-left: 13px;
+        }
+
+        .navbar .container {
+            margin-top: 0px;
+            padding-top: 0px;
+            margin-bottom: 0px;
+            padding-bottom: 0px;
+        }
+
+        .height-reduce {
+            padding: 0px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <div class="navbar-collapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link color" href="#">OUR TEAM</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link color" href="events.html">EVENTS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link color" href="#">TECHFEST INSIGHTS</a>
+                        </li>
+                    </ul>
+                    <a class="navbar-brand mx-auto" href="index.html">
+                        <img class="logo" src="images/logo3.png" alt="Insignia Logo">
+                    </a>
+                    <ul class="navbar-nav ml-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link color" href="#">REGISTRATIONS</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link color" href="past-glory.html">PAST GLORY: INSIGNIA 2022</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <h1 class="mt-10 mb-2 text-center capitalize text-4xl">Technical Events</h1>
+    <hr class="w-1/5 mx-auto">
+
+    <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-3 md:gap-2 justify-items-center">
+        <div class="py-10 hover:scale-110 transform transition-transform duration-700 ease-in-out hover:drop-shadow-lg">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full">
+                <img src="images/fun-activities.jpg" alt="" class="w-full">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Quiz-O-Pedia</div>
+                    <p class="text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam id ex
+                        dicta!
+                        Aut odit error quam excepturi iusto vitae neque.
+                    </p>
+                </div>
+
+
+                <div class="grid grid-flow-col gap-5 pb-2 px-6">
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</button>
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-10 hover:scale-110 transform transition-transform duration-700 ease-in-out">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full">
+                <img src="images/fun-activities.jpg" alt="" class="w-full">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Tech-Deb
+                    </div>
+                    <p class="text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam id ex
+                        dicta!
+                        Aut odit error quam excepturi iusto vitae neque.
+                    </p>
+                </div>
+
+
+                <div class="grid grid-flow-col gap-5 pb-2 px-6">
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</button>
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-10 hover:scale-110 transform transition-transform duration-700 ease-in-out">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full">
+                <img src="images/fun-activities.jpg" alt="" class="w-full">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Spin a Web
+                    </div>
+                    <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dolorem vel repellat ea quisquam sunt nihil delectus sapiente perspiciatis rerum obcaecati porro dolores voluptatem minus ratione, corrupti, recusandae veniam mollitia commodi! Soluta officiis sed quo. Maiores pariatur voluptatibus voluptatum nostrum in, rerum at odio dignissimos, reiciendis, cumque porro perferendis inventore?
+                    </p>
+                </div>
+
+
+                <div class="grid grid-flow-col gap-5 pb-2 px-6">
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</button>
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-10 hover:scale-110 transform transition-transform duration-700 ease-in-out">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full">
+                <img src="images/fun-activities.jpg" alt="" class="w-full">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">AvishkarAnvesha
+                    </div>
+                    <p class="text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam id ex
+                        dicta!
+                        Aut odit error quam excepturi iusto vitae neque.
+                    </p>
+                </div>
+
+
+                <div class="grid grid-flow-col gap-5 pb-2 px-6">
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</button>
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-10 hover:scale-110 transform transition-transform duration-700 ease-in-out">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full">
+                <img src="images/fun-activities.jpg" alt="" class="w-full">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Codecode
+                    </div>
+                    <p class="text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam id ex
+                        dicta!
+                        Aut odit error quam excepturi iusto vitae neque.
+                    </p>
+                </div>
+
+
+                <div class="grid grid-flow-col gap-5 pb-2 px-6">
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</button>
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-10 hover:scale-110 transform transition-transform duration-700 ease-in-out">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full">
+                <img src="images/fun-activities.jpg" alt="" class="w-full">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">LAN/Mobile Gaming
+                    </div>
+                    <p class="text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam id ex
+                        dicta!
+                        Aut odit error quam excepturi iusto vitae neque.
+                    </p>
+                </div>
+
+
+                <div class="grid grid-flow-col gap-5 pb-2 px-6">
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</button>
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-10 hover:scale-110 transform transition-transform duration-700 ease-in-out">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full">
+                <img src="images/fun-activities.jpg" alt="" class="w-full">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Project Display
+                    </div>
+                    <p class="text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam id ex
+                        dicta!
+                        Aut odit error quam excepturi iusto vitae neque.
+                    </p>
+                </div>
+
+
+                <div class="grid grid-flow-col gap-5 pb-2 px-6">
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</button>
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-10 hover:scale-110 transform transition-transform duration-700 ease-in-out">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full">
+                <img src="images/fun-activities.jpg" alt="" class="w-full">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Electro-Hunt
+                    </div>
+                    <p class="text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam id ex
+                        dicta!
+                        Aut odit error quam excepturi iusto vitae neque.
+                    </p>
+                </div>
+
+
+                <div class="grid grid-flow-col gap-5 pb-2 px-6">
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</button>
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-10 hover:scale-110 transform transition-transform duration-700 ease-in-out">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full">
+                <img src="images/fun-activities.jpg" alt="" class="w-full">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Ad-Vaganza
+                    </div>
+                    <p class="text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam id ex
+                        dicta!
+                        Aut odit error quam excepturi iusto vitae neque.
+                    </p>
+                </div>
+
+
+                <div class="grid grid-flow-col gap-5 pb-2 px-6">
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</button>
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-10 hover:scale-110 transform transition-transform duration-700 ease-in-out">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full">
+                <img src="images/fun-activities.jpg" alt="" class="w-full">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">SharkTank
+                    </div>
+                    <p class="text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam id ex
+                        dicta!
+                        Aut odit error quam excepturi iusto vitae neque.
+                    </p>
+                </div>
+
+
+                <div class="grid grid-flow-col gap-5 pb-2 px-6">
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2" href="index.html">Register</button>
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <br>
+    <br>
+    <h1 class="mt-10 mb-2 text-center capitalize text-4xl">Cultural Events</h1>
+    <hr class="lg:w-1/5 md:w-1/2 sm mx-auto">
+
+
+
+    <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-3 md:gap-2 justify-items-center">
+        <div class="py-10 hover:scale-110 transform transition-transform duration-700 ease-in-out hover:drop-shadow-lg">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full">
+                <img src="images/fun-activities.jpg" alt="" class="w-full">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Aaja Nachle</div>
+                    <p class="text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam id ex
+                        dicta!
+                        Aut odit error quam excepturi iusto vitae neque.
+                    </p>
+                </div>
+
+
+                <div class="grid grid-flow-col gap-5 pb-2 px-6">
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</button>
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-10 hover:scale-110 transform transition-transform duration-700 ease-in-out">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full">
+                <img src="images/fun-activities.jpg" alt="" class="w-full">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">SAREGAMA
+                    </div>
+                    <p class="text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam id ex
+                        dicta!
+                        Aut odit error quam excepturi iusto vitae neque.
+                    </p>
+                </div>
+
+
+                <div class="grid grid-flow-col gap-5 pb-2 px-6">
+                    <a class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2" href="index.html">Register</a>
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-10 hover:scale-110 transform transition-transform duration-700 ease-in-out">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full">
+                <img src="images/fun-activities.jpg" alt="" class="w-full">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Rangmanch
+                    </div>
+                    <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dolorem vel repellat ea quisquam sunt nihil delectus sapiente perspiciatis rerum obcaecati porro dolores voluptatem minus ratione, corrupti, recusandae veniam mollitia commodi! Soluta officiis sed quo. Maiores pariatur voluptatibus voluptatum nostrum in, rerum at odio dignissimos, reiciendis, cumque porro perferendis inventore?
+                    </p>
+                </div>
+
+
+                <div class="grid grid-flow-col gap-5 pb-2 px-6">
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</button>
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-10 hover:scale-110 transform transition-transform duration-700 ease-in-out">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full">
+                <img src="images/fun-activities.jpg" alt="" class="w-full">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Reels Recursive
+                    </div>
+                    <p class="text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam id ex
+                        dicta!
+                        Aut odit error quam excepturi iusto vitae neque.
+                    </p>
+                </div>
+
+
+                <div class="grid grid-flow-col gap-5 pb-2 px-6">
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</button>
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-10 hover:scale-110 transform transition-transform duration-700 ease-in-out">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full">
+                <img src="images/fun-activities.jpg" alt="" class="w-full">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Photography
+                    </div>
+                    <p class="text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam id ex
+                        dicta!
+                        Aut odit error quam excepturi iusto vitae neque.
+                    </p>
+                </div>
+
+
+                <div class="grid grid-flow-col gap-5 pb-2 px-6">
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</button>
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-10 hover:scale-110 transform transition-transform duration-700 ease-in-out">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full">
+                <img src="images/fun-activities.jpg" alt="" class="w-full">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Cinematography
+                    </div>
+                    <p class="text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam id ex
+                        dicta!
+                        Aut odit error quam excepturi iusto vitae neque.
+                    </p>
+                </div>
+
+
+                <div class="grid grid-flow-col gap-5 pb-2 px-6">
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</button>
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-10 hover:scale-110 transform transition-transform duration-700 ease-in-out">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full">
+                <img src="images/fun-activities.jpg" alt="" class="w-full">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">FashionIsta
+                    </div>
+                    <p class="text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam id ex
+                        dicta!
+                        Aut odit error quam excepturi iusto vitae neque.
+                    </p>
+                </div>
+
+
+                <div class="grid grid-flow-col gap-5 pb-2 px-6">
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</button>
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-10 hover:scale-110 transform transition-transform duration-700 ease-in-out">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full">
+                <img src="images/fun-activities.jpg" alt="" class="w-full">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Standup
+                    </div>
+                    <p class="text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam id ex
+                        dicta!
+                        Aut odit error quam excepturi iusto vitae neque.
+                    </p>
+                </div>
+
+
+                <div class="grid grid-flow-col gap-5 pb-2 px-6">
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</button>
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-10 hover:scale-110 transform transition-transform duration-700 ease-in-out">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full">
+                <img src="images/fun-activities.jpg" alt="" class="w-full">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Comedy/Mimicry
+                    </div>
+                    <p class="text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam id ex
+                        dicta!
+                        Aut odit error quam excepturi iusto vitae neque.
+                    </p>
+                </div>
+
+
+                <div class="grid grid-flow-col gap-5 pb-2 px-6">
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</button>
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</button>
+                </div>
+            </div>
+        </div>
+          
+    </div>
+
+
+
+
+
+
+
+    <br>
+    <br>
+    <h1 class="mt-10 mb-2 text-center capitalize text-4xl">Fun Activities</h1>
+    <hr class="w-1/5 mx-auto">
+
+
+
+    <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-3 md:gap-2 justify-items-center">
+        <div class="py-10 hover:scale-110 transform transition-transform duration-700 ease-in-out hover:drop-shadow-lg">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full">
+                <img src="images/fun-activities.jpg" alt="" class="w-full">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Treasure Hunt
+                    </div>
+                    <p class="text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam id ex
+                        dicta!
+                        Aut odit error quam excepturi iusto vitae neque.
+                    </p>
+                </div>
+
+
+                <div class="grid grid-flow-col gap-5 pb-2 px-6">
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</button>
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-10 hover:scale-110 transform transition-transform duration-700 ease-in-out">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full">
+                <img src="images/fun-activities.jpg" alt="" class="w-full">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Box Cricket
+                    </div>
+                    <p class="text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam id ex
+                        dicta!
+                        Aut odit error quam excepturi iusto vitae neque.
+                    </p>
+                </div>
+
+
+                <div class="grid grid-flow-col gap-5 pb-2 px-6">
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</button>
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-10 hover:scale-110 transform transition-transform duration-700 ease-in-out">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full">
+                <img src="images/fun-activities.jpg" alt="" class="w-full">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Headphone Whisper
+                    </div>
+                    <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dolorem vel repellat ea quisquam sunt nihil delectus sapiente perspiciatis rerum obcaecati porro dolores voluptatem minus ratione, corrupti, recusandae veniam mollitia commodi! Soluta officiis sed quo. Maiores pariatur voluptatibus voluptatum nostrum in, rerum at odio dignissimos, reiciendis, cumque porro perferendis inventore?
+                    </p>
+                </div>
+
+
+                <div class="grid grid-flow-col gap-5 pb-2 px-6">
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</button>
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-10 hover:scale-110 transform transition-transform duration-700 ease-in-out">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full">
+                <img src="images/fun-activities.jpg" alt="" class="w-full">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Bollywood Hungama
+                    </div>
+                    <p class="text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam id ex
+                        dicta!
+                        Aut odit error quam excepturi iusto vitae neque.
+                    </p>
+                </div>
+
+
+                <div class="grid grid-flow-col gap-5 pb-2 px-6">
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</button>
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-10 hover:scale-110 transform transition-transform duration-700 ease-in-out">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full">
+                <img src="images/fun-activities.jpg" alt="" class="w-full">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Caption Star
+                    </div>
+                    <p class="text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam id ex
+                        dicta!
+                        Aut odit error quam excepturi iusto vitae neque.
+                    </p>
+                </div>
+
+
+                <div class="grid grid-flow-col gap-5 pb-2 px-6">
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</button>
+                    <button class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

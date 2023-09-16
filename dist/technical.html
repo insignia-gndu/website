@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Events</title>
+    <link rel="stylesheet" href="output.css">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="script.js"> -->
+
+    <style>
+        a {
+            margin-inline: 14px;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        header {
+            font-family: 'Times New Roman', Times, serif;
+
+        }
+
+        header p {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            justify-content: center;
+        }
+
+        .navbar-brand img {
+            max-height: 140px;
+        }
+
+        .container {
+            max-width: 100%;
+            max-height: auto;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        .event-description {
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            max-width: 80%;
+            margin: 0 auto;
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 24px;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .image-slider {
+            width: 100%;
+            height: auto;
+            max-height: 80vh;
+            overflow: hidden;
+        }
+
+        .slider-content {
+            display: flex;
+            animation: slide 20s infinite;
+        }
+
+        .slider-content img {
+            width: 100vw;
+            height: 80vh;
+            object-fit: cover;
+        }
+
+
+
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+
+            20% {
+                transform: translateX(-100%);
+            }
+
+            40% {
+                transform: translateX(-200%);
+            }
+
+            60% {
+                transform: translateX(-300%);
+            }
+
+            80% {
+                transform: translateX(-400%);
+            }
+
+            100% {
+                transform: translateX(-500%);
+            }
+        }
+
+        @media (min-width: 300px) and (max-width: 795px) {
+
+            .event-description {
+                top: 90%;
+                width: 90%;
+                font-size: 18px;
+            }
+
+
+            .container {
+                width: 90%;
+
+            }
+
+            #left {
+                margin-left: -35%;
+            }
+
+            #right {
+                margin-right: -35%;
+            }
+        }
+
+        @media (min-width: 800px) and (max-width: 1280px) {
+
+            #left {
+                margin-left: -20%;
+            }
+
+            #right {
+                margin-right: -20%;
+            }
+        }
+
+        .event-card {
+            flex-basis: calc(33.33% - 20px);
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .event-card img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .card:hover {
+            transition: transform 0.2s ease;
+            transform: scale(0.9);
+
+        }
+
+        .trophy-img {
+            max-width: 50px;
+        }
+
+
+        .trophy-decoration {
+            position: absolute;
+            top: 2%;
+
+        }
+
+        .left {
+            left: 30%;
+        }
+
+        .right {
+            right: 30%;
+        }
+
+        .navbar {
+            /* background-image: linear-gradient(to bottom, rgb(8, 13, 99), rgb(2, 2, 19)); */
+            /* height: 120px; */
+            height: 80%;
+            padding: 0.25rem;
+        }
+
+        .color {
+            color: white;
+            /* Set the initial color */
+            transition-duration: 400ms;
+            font-size: 20px;
+        }
+
+        /* 
+        .logo {
+            width: 65%;
+            height: auto;
+            margin-left: 13px;
+        } */
+
+        .navbar .container {
+            margin-top: 0px;
+            padding-top: 0px;
+            margin-bottom: 0px;
+            padding-bottom: 0px;
+        }
+
+        .height-reduce {
+            padding: 0px;
+        }
+
+
+        .content {
+            display: none;
+        }
+
+        .content2 {
+            display: none;
+        }
+
+        .content3 {
+            display: none;
+        }
+
+        .active-content {
+            display: block;
+        }
+
+        .nav-item {
+            text-align: center;
+        }
+
+        .hr {
+            height: 1px;
+            background-color: gainsboro;
+        }
+
+        .colorrr:hover {
+            color: red;
+        }
+        
+    </style>
+
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark">
+            <div class="container">
+                <div class="navbar-collapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link color" href="#">OUR TEAM</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link color" href="events2.html">EVENTS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link color" href="#">TECHFEST INSIGHTS</a>
+                        </li>
+                    </ul>
+                    <a class="navbar-brand mx-auto" href="index.html">
+                        <img class="logo" src="images/logo3.png" alt="Insignia Logo">
+                    </a>
+                    <ul class="navbar-nav ml-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link color" href="#">REGISTRATIONS</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link color" href="past-glory.html">PAST GLORY: INSIGNIA 2022</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <h1 class="mt-10 mb-2 text-center capitalize text-4xl">Technical Events</h1>
+    <hr class="w-1/5 mx-auto">
+
+    <br>
+
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 justify-items-center h-full">
+
+        <div class="py-10 ease-in-out col-span-1 mx-4 hover:drop-shadow-2xl cursor-pointer hover:shadow-slate-950 duration-1000">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm ">
+                <img src="images/fun-activities.jpg" alt="" class="w-full">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Quiz-O-Pedia</div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="py-10 ease-in-out col-span-2 mx-4">
+
+            <div class="rounded overflow-hidden shadow-lg max-w-4xl">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <div id="navbarNavAltMarkup" class="navbar-collapse justify-content-center">
+                        <div class="navbar-nav">
+                            <a class="nav-link active margin colorrr" href="#" onclick="showContent('about'); return false;">ABOUT</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent('structure'); return false;">STRUCTURE</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent('timeline'); return false;">TIMELINE</a>
+                            <a class="nav-link active" href="#" onclick="showContent('rules'); return false;">RULES</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent('contact'); return false;">CONTACT</a>
+                        </div>
+                    </div>
+                </nav>
+
+                <div id="about" class="content active-content">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, rem
+                            at
+                            ea, tempora accusantium veniam, rerum tempore delectus blanditiis inventore temporibus eum.
+                            At
+                            error sequi, deleniti, eum quam optio illo repellat ducimus dolore minus libero delectus
+                            odit
+                            blanditiis animi provident quasi ad quo est? Dolorem, dignissimos! Iusto, commodi enim.
+                            Dolor
+                            aut corporis consequuntur expedita cupiditate dicta error soluta excepturi fuga hic, nulla
+                            voluptate minus ratione aliquid tempora eum at quas eveniet molestias porro suscipit beatae
+                            sit.
+                            Sapiente illum adipisci reprehenderit et dolor rerum eveniet est saepe at veritatis quia
+                            quaerat
+                            eum rem possimus similique ducimus voluptatibus quas, incidunt commodi ut.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="structure" class="content">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+                            tempore, laudantium molestias voluptas quod, rerum animi autem cum temporibus repellendus
+                            aperiam numquam asperiores fugiat quo ut ad laborum reprehenderit quasi. Sit dignissimos
+                            quasi deleniti atque qui est dolore delectus totam odit perferendis, accusantium vero illum
+                            quas. Esse reiciendis saepe animi iusto deleniti impedit, consequatur unde laudantium
+                            officiis ratione, beatae sint itaque iure laborum ea minima nostrum quos aspernatur nesciunt
+                            harum pariatur. Earum ipsum impedit voluptatum.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="timeline" class="content">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+                            velit quo eum pariatur debitis quisquam ducimus facilis repudiandae alias at? Tempora
+                            obcaecati alias molestiae voluptas magnam nulla molestias earum quia reiciendis. Adipisci
+                            incidunt porro excepturi voluptatum vero sequi, eaque maxime nobis ducimus officiis, cumque
+                            at eius. Accusamus ab sit unde?
+                        </p>
+                    </div>
+                </div>
+
+                <div id="rules" class="content">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos dolor at
+                            quisquam, nostrum quasi tempora quae accusamus necessitatibus. Dolorem sit consectetur in,
+                            officiis reprehenderit sed. Explicabo distinctio, consequatur fugiat consequuntur et quidem
+                            molestiae, esse quo enim corporis aut odit maiores quaerat praesentium? Aut iusto nisi,
+                            dolores tenetur at recusandae saepe corrupti ipsam, officia voluptas pariatur exercitationem
+                            nam alias eos soluta.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="contact" class="content">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ex
+                            eveniet fugiat quia eum numquam aliquid modi aspernatur veritatis illo.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <br>
+    <hr class="hr">
+    <br>
+
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 justify-items-center">
+
+        <div class="py-10 ease-in-out col-span-1 mx-4 hover:drop-shadow-xl cursor-pointer hover:shadow-slate-950 duration-1000">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm">
+                <img src="images/fun-activities.jpg" alt="" class="w-full">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Quiz-O-Pedia</div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="py-10 ease-in-out col-span-2 mx-4">
+
+            <div class="rounded overflow-hidden shadow-lg max-w-4xl">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <div id="navbarNavAltMarkup" class="navbar-collapse justify-content-center">
+                        <div class="navbar-nav">
+                            <a class="nav-link active" href="#" onclick="showContent2('about2'); return false;">ABOUT</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent2('structure2'); return false;">STRUCTURE</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent2('timeline2'); return false;">TIMELINE</a>
+                            <a class="nav-link active" href="#" onclick="showContent2('rules2'); return false;">RULES</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent2('contact2'); return false;">CONTACT</a>
+                        </div>
+                    </div>
+                </nav>
+
+                <div id="about2" class="content2 active-content">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, rem
+                            at
+                            ea, tempora accusantium veniam, rerum tempore delectus blanditiis inventore temporibus eum.
+                            At
+                            error sequi, deleniti, eum quam optio illo repellat ducimus dolore minus libero delectus
+                            odit
+                            blanditiis animi provident quasi ad quo est? Dolorem, dignissimos! Iusto, commodi enim.
+                            Dolor
+                            aut corporis consequuntur expedita cupiditate dicta error soluta excepturi fuga hic, nulla
+                            voluptate minus ratione aliquid tempora eum at quas eveniet molestias porro suscipit beatae
+                            sit.
+                            Sapiente illum adipisci reprehenderit et dolor rerum eveniet est saepe at veritatis quia
+                            quaerat
+                            eum rem possimus similique ducimus voluptatibus quas, incidunt commodi ut.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="structure2" class="content2">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+                            tempore, laudantium molestias voluptas quod, rerum animi autem cum temporibus repellendus
+                            aperiam numquam asperiores fugiat quo ut ad laborum reprehenderit quasi. Sit dignissimos
+                            quasi deleniti atque qui est dolore delectus totam odit perferendis, accusantium vero illum
+                            quas. Esse reiciendis saepe animi iusto deleniti impedit, consequatur unde laudantium
+                            officiis ratione, beatae sint itaque iure laborum ea minima nostrum quos aspernatur nesciunt
+                            harum pariatur. Earum ipsum impedit voluptatum.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="timeline2" class="content2">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+                            velit quo eum pariatur debitis quisquam ducimus facilis repudiandae alias at? Tempora
+                            obcaecati alias molestiae voluptas magnam nulla molestias earum quia reiciendis. Adipisci
+                            incidunt porro excepturi voluptatum vero sequi, eaque maxime nobis ducimus officiis, cumque
+                            at eius. Accusamus ab sit unde?
+                        </p>
+                    </div>
+                </div>
+
+                <div id="rules2" class="content2">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos dolor at
+                            quisquam, nostrum quasi tempora quae accusamus necessitatibus. Dolorem sit consectetur in,
+                            officiis reprehenderit sed. Explicabo distinctio, consequatur fugiat consequuntur et quidem
+                            molestiae, esse quo enim corporis aut odit maiores quaerat praesentium? Aut iusto nisi,
+                            dolores tenetur at recusandae saepe corrupti ipsam, officia voluptas pariatur exercitationem
+                            nam alias eos soluta.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="contact2" class="content2">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ex
+                            eveniet fugiat quia eum numquam aliquid modi aspernatur veritatis illo.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <br>
+    <hr class="hr">
+    <br>
+
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 justify-items-center">
+
+        <div class="py-10 ease-in-out col-span-1 mx-4 hover:drop-shadow-2xl cursor-pointer hover:shadow-slate-950 duration-1000">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm">
+                <img src="images/fun-activities.jpg" alt="" class="w-full">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Quiz-O-Pedia</div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="py-10 ease-in-out col-span-2 mx-4">
+
+            <div class="rounded overflow-hidden shadow-lg max-w-4xl">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <div id="navbarNavAltMarkup" class="navbar-collapse justify-content-center">
+                        <div class="navbar-nav">
+                            <a class="nav-link active" href="#"
+                                onclick="showContent3('about3'); return false;">ABOUT</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent3('structure3'); return false;">STRUCTURE</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent3('timeline3'); return false;">TIMELINE</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent3('rules3'); return false;">RULES</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent3('contact3'); return false;">CONTACT</a>
+                        </div>
+                    </div>
+                </nav>
+
+                <div id="about3" class="content3 active-content">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, rem
+                            at
+                            ea, tempora accusantium veniam, rerum tempore delectus blanditiis inventore temporibus eum.
+                            At
+                            error sequi, deleniti, eum quam optio illo repellat ducimus dolore minus libero delectus
+                            odit
+                            blanditiis animi provident quasi ad quo est? Dolorem, dignissimos! Iusto, commodi enim.
+                            Dolor
+                            aut corporis consequuntur expedita cupiditate dicta error soluta excepturi fuga hic, nulla
+                            voluptate minus ratione aliquid tempora eum at quas eveniet molestias porro suscipit beatae
+                            sit.
+                            Sapiente illum adipisci reprehenderit et dolor rerum eveniet est saepe at veritatis quia
+                            quaerat
+                            eum rem possimus similique ducimus voluptatibus quas, incidunt commodi ut.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="structure3" class="content3">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+                            tempore, laudantium molestias voluptas quod, rerum animi autem cum temporibus repellendus
+                            aperiam numquam asperiores fugiat quo ut ad laborum reprehenderit quasi. Sit dignissimos
+                            quasi deleniti atque qui est dolore delectus totam odit perferendis, accusantium vero illum
+                            quas. Esse reiciendis saepe animi iusto deleniti impedit, consequatur unde laudantium
+                            officiis ratione, beatae sint itaque iure laborum ea minima nostrum quos aspernatur nesciunt
+                            harum pariatur. Earum ipsum impedit voluptatum.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="timeline3" class="content3">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+                            velit quo eum pariatur debitis quisquam ducimus facilis repudiandae alias at? Tempora
+                            obcaecati alias molestiae voluptas magnam nulla molestias earum quia reiciendis. Adipisci
+                            incidunt porro excepturi voluptatum vero sequi, eaque maxime nobis ducimus officiis, cumque
+                            at eius. Accusamus ab sit unde?
+                        </p>
+                    </div>
+                </div>
+
+                <div id="rules3" class="content3">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos dolor at
+                            quisquam, nostrum quasi tempora quae accusamus necessitatibus. Dolorem sit consectetur in,
+                            officiis reprehenderit sed. Explicabo distinctio, consequatur fugiat consequuntur et quidem
+                            molestiae, esse quo enim corporis aut odit maiores quaerat praesentium? Aut iusto nisi,
+                            dolores tenetur at recusandae saepe corrupti ipsam, officia voluptas pariatur exercitationem
+                            nam alias eos soluta.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="contact3" class="content3">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ex
+                            eveniet fugiat quia eum numquam aliquid modi aspernatur veritatis illo.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <script>
+        function showContent(contentId) {
+            // Hide all content areas
+            const contentAreas = document.querySelectorAll('.content');
+            contentAreas.forEach(content => content.style.display = 'none');
+
+            // Show the selected content
+            document.getElementById(contentId).style.display = 'block';
+        }
+    </script>
+
+    <script>
+        function showContent2(contentId) {
+            // Hide all content areas
+            const contentAreas = document.querySelectorAll('.content2');
+            contentAreas.forEach(content2 => content2.style.display = 'none');
+
+            // Show the selected content
+            document.getElementById(contentId).style.display = 'block';
+        }
+    </script>
+
+    <script>
+        function showContent3(contentId) {
+            // Hide all content areas
+            const contentAreas = document.querySelectorAll('.content3');
+            contentAreas.forEach(content => content.style.display = 'none');
+
+            // Show the selected content
+            document.getElementById(contentId).style.display = 'block';
+        }
+    </script>
+
+
+</body>
+
+</html>
