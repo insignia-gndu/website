@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural Events</title>
+    <link rel="shortcut icon" href="../assets/images/Insignia final logosArtboard 1.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/design.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Patua+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="output.css">
+    <style>
+         a {
+            margin-inline: 14px;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            text-align: center;
+            overflow-x: hidden;
+        }
+      header{
+        font-family: 'Times New Roman', Times, serif;
+        width: 100%;
+        
+      }
+
+        .navbar-brand img {
+            max-height: 100px;
+        }
+      /* for navbar */
+       .container {
+            max-width: 100%;
+            max-height: auto;
+            margin: 0 auto;
+             padding: 10px;
+        }
+
+        .event-description {
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            max-width: 80%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.7); 
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            min-height: fit-content;
+        }
+
+        .image-slider {
+            width: 90%;
+            height: auto; 
+            max-height: 80vh; 
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slider-content {
+            display: flex;
+            animation: slide 20s infinite;
+        }
+
+        .slider-content img {
+            width: 100vw;
+            height: 80vh;
+            object-fit: cover;
+        }
+       h2{
+        font-family: inherit
+       }
+
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            20% { transform: translateX(-100%); }
+            40% { transform: translateX(-200%); }
+            60% { transform: translateX(-300%); }
+            80% { transform: translateX(-400%); }
+            100% { transform: translateX(-500%); }
+        }
+        @media (min-width: 300px) and (max-width: 795px) {
+        
+            .event-description {
+                top: 50%; 
+                width: 50%; 
+                font-size: 18px;
+            }
+            .container {
+                width: 90%; 
+               
+            }
+         #left {
+           margin-left: -35%;
+        }
+    
+        #right {
+           margin-right:-35%;
+        }
+        }
+        @media  (min-width: 800px) and (max-width: 1280px){
+
+            #left {
+           margin-left: -20%;
+        }
+    
+        #right {
+           margin-right:-20%;
+        }
+        }
+        
+        .event-card {
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+        }
+
+        .event-card img {
+            max-width: 100%;
+            height: auto;
+        }
+        .card:hover {
+            transition: transform 0.2s ease;
+            transform: scale(1.05);    
+        }
+   
+    .trophy-img {
+            max-width: 50px;
+        }
+       
+        .trophy-decoration {
+            position: absolute;
+            top: 2%;
+            
+        }
+    
+        .left {
+            left: 30%;
+        }
+    
+        .right {
+            right: 30%;
+        }
+       
+  .events{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+#title-sponsors {
+    background-color: #f8f8f8;
+    padding: 40px 0;
+}
+
+.sponsor-card {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.7s ease-in-out;
+}
+
+.sponsor-card:hover {
+    transform: scale(1.05);
+}
+
+
+.square-box:hover {
+    transform: scale(1.05);
+}
+.square-box {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.square-box .btn {
+    color: #000;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid transparent;
+    border-image: linear-gradient(to bottom, #4e4eb6, #952fb5);
+    border-image-slice: 1;
+    flex-grow: 1;
+   
+}
+
+.square-box .btn:hover {
+    background-color: #4e4eb6;
+    color: #fff;
+}
+@media (min-width: 770px) and (max-width: 1195px) {
+        
+    .square-box {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    margin-bottom: 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+        }
+
+        .content {
+    display: none;
+}
+
+.content2 {
+    display: none;
+}
+
+.content3 {
+    display: none;
+}
+
+.content4 {
+    display: none;
+}
+
+.content5 {
+    display: none;
+}
+
+.content6 {
+    display: none;
+}
+
+.content7 {
+    display: none;
+}
+
+.content8 {
+    display: none;
+}
+
+.content9 {
+    display: none;
+}
+
+.content10 {
+    display: none;
+}
+
+.active-content {
+    display: block;
+}
+
+.nav-item {
+    text-align: center;
+}
+
+.hr {
+    height: 1px;
+    background-color: gainsboro;
+}
+
+/* .navbar {
+    background-color: rgb(142, 48, 142);
+    height: 120px;
+    height: 80%;
+    padding: 0.25rem;
+} */
+
+.active {
+    color: white;
+    transition-duration: 500ms;
+}
+
+.active:hover {
+    /* color of mini navbar */
+    color: lightgrey;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        
+    <div class="hero-section">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <div class="navbar-collapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 svg-icons">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+                                  </svg>
+                                  <br>
+                                <span class="nav-item-text">Our Team</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="events.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 svg-icons">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 002.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 012.916.52 6.003 6.003 0 01-5.395 4.972m0 0a6.726 6.726 0 01-2.749 1.35m0 0a6.772 6.772 0 01-3.044 0" />
+                                  </svg>
+                                    <br>
+                                  <span class="nav-item-text">Competitions </span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 svg-icons">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+                                  </svg>
+                                  <br>
+                                  <span class="nav-item-text">TechFest Insights </span></a>
+                        </li>
+                    </ul>
+                    <a class="navbar-brand mx-auto" href="index.html">
+                        <img src="../assets/images/final-logo.png" alt="Insignia Logo">
+                    </a>
+                    <ul class="navbar-nav ml-auto">
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 svg-icons">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.35 3.836c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m8.9-4.414c.376.023.75.05 1.124.08 1.131.094 1.976 1.057 1.976 2.192V16.5A2.25 2.25 0 0118 18.75h-2.25m-7.5-10.5H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V18.75m-7.5-10.5h6.375c.621 0 1.125.504 1.125 1.125v9.375m-8.25-3l1.5 1.5 3-3.75" />
+                                  </svg>
+                                  <br>
+                                  <span class="nav-item-text">Registrations</span></a>
+                        </li>
+                       
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 svg-icons">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 8.25H9m6 3H9m3 6l-3-3h1.5a3 3 0 100-6M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                  </svg>
+                                  
+                                  <br>
+                                  <span class="nav-item-text">Our Sponsors</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 svg-icons">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                                  </svg>
+                                  <br>
+                                  <span class="nav-item-text">Contact Us </span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bg-blur"></div>
+            </nav>
+    </header>
+
+
+    <h1 class="mt-10 mb-2 text-center capitalize text-4xl">Cultural Events</h1>
+    <hr class="w-1/5 mx-auto">
+
+    <br>
+
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 justify-items-center h-full">
+
+        <div
+            class="py-10 ease-in-out col-span-1 mx-4 hover:drop-shadow-2xl cursor-pointer hover:shadow-slate-950 duration-1000">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm ">
+                <img src="images/fun-activities.jpg" alt="" class="w-full">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Aaja Nachle</div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="py-10 ease-in-out col-span-2 mx-4">
+
+            <div class="rounded overflow-hidden shadow-lg max-w-4xl">
+                <nav class="navbar navbar-expand-lg">
+                    <div id="navbarNavAltMarkup" class="navbar-collapse justify-content-center">
+                        <div class="navbar-nav">
+                            <a class="nav-link active margin" href="#"
+                                onclick="showContent('about'); return false;">ABOUT</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent('structure'); return false;">STRUCTURE</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent('timeline'); return false;">TIMELINE</a>
+                            <a class="nav-link active" href="#" onclick="showContent('rules'); return false;">RULES</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent('contact'); return false;">CONTACT</a>
+                        </div>
+                    </div>
+                </nav>
+
+                <div id="about" class="content active-content">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, rem
+                            at
+                            ea, tempora accusantium veniam, rerum tempore delectus blanditiis inventore temporibus eum.
+                            At
+                            error sequi, deleniti, eum quam optio illo repellat ducimus dolore minus libero delectus
+                            odit
+                            blanditiis animi provident quasi ad quo est? Dolorem, dignissimos! Iusto, commodi enim.
+                            Dolor
+                            aut corporis consequuntur expedita cupiditate dicta error soluta excepturi fuga hic, nulla
+                            voluptate minus ratione aliquid tempora eum at quas eveniet molestias porro suscipit beatae
+                            sit.
+                            Sapiente illum adipisci reprehenderit et dolor rerum eveniet est saepe at veritatis quia
+                            quaerat
+                            eum rem possimus similique ducimus voluptatibus quas, incidunt commodi ut.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="structure" class="content">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+                            tempore, laudantium molestias voluptas quod, rerum animi autem cum temporibus repellendus
+                            aperiam numquam asperiores fugiat quo ut ad laborum reprehenderit quasi. Sit dignissimos
+                            quasi deleniti atque qui est dolore delectus totam odit perferendis, accusantium vero illum
+                            quas. Esse reiciendis saepe animi iusto deleniti impedit, consequatur unde laudantium
+                            officiis ratione, beatae sint itaque iure laborum ea minima nostrum quos aspernatur nesciunt
+                            harum pariatur. Earum ipsum impedit voluptatum.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="timeline" class="content">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+                            velit quo eum pariatur debitis quisquam ducimus facilis repudiandae alias at? Tempora
+                            obcaecati alias molestiae voluptas magnam nulla molestias earum quia reiciendis. Adipisci
+                            incidunt porro excepturi voluptatum vero sequi, eaque maxime nobis ducimus officiis, cumque
+                            at eius. Accusamus ab sit unde?
+                        </p>
+                    </div>
+                </div>
+
+                <div id="rules" class="content">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos dolor at
+                            quisquam, nostrum quasi tempora quae accusamus necessitatibus. Dolorem sit consectetur in,
+                            officiis reprehenderit sed. Explicabo distinctio, consequatur fugiat consequuntur et quidem
+                            molestiae, esse quo enim corporis aut odit maiores quaerat praesentium? Aut iusto nisi,
+                            dolores tenetur at recusandae saepe corrupti ipsam, officia voluptas pariatur exercitationem
+                            nam alias eos soluta.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="contact" class="content">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ex
+                            eveniet fugiat quia eum numquam aliquid modi aspernatur veritatis illo.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <br>
+    <hr class="hr">
+    <br>
+
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 justify-items-center">
+
+        <div
+            class="py-10 ease-in-out col-span-1 mx-4 hover:drop-shadow-xl cursor-pointer hover:shadow-slate-950 duration-1000">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm">
+                <img src="images/fun-activities.jpg" alt="" class="w-full">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">SAREGAMA
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="py-10 ease-in-out col-span-2 mx-4">
+
+            <div class="rounded overflow-hidden shadow-lg max-w-4xl">
+                <nav class="navbar navbar-expand-lg">
+                    <div id="navbarNavAltMarkup" class="navbar-collapse justify-content-center">
+                        <div class="navbar-nav">
+                            <a class="nav-link active" href="#"
+                                onclick="showContent2('about2'); return false;">ABOUT</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent2('structure2'); return false;">STRUCTURE</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent2('timeline2'); return false;">TIMELINE</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent2('rules2'); return false;">RULES</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent2('contact2'); return false;">CONTACT</a>
+                        </div>
+                    </div>
+                </nav>
+
+                <div id="about2" class="content2 active-content">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, rem
+                            colorr
+                            at
+                            ea, tempora accusantium veniam, rerum tempore delectus blanditiis inventore temporibus eum.
+                            At
+                            error sequi, deleniti, eum quam optio illo repellat ducimus dolore minus libero delectus
+                            odit
+                            blanditiis animi provident quasi ad quo est? Dolorem, dignissimos! Iusto, commodi enim.
+                            Dolor
+                            aut corporis consequuntur expedita cupiditate dicta error soluta excepturi fuga hic, nulla
+                            voluptate minus ratione aliquid tempora eum at quas eveniet molestias porro suscipit beatae
+                            sit.
+                            Sapiente illum adipisci reprehenderit et dolor rerum eveniet est saepe at veritatis quia
+                            quaerat
+                            eum rem possimus similique ducimus voluptatibus quas, incidunt commodi ut.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="structure2" class="content2">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+                            tempore, laudantium molestias voluptas quod, rerum animi autem cum temporibus repellendus
+                            aperiam numquam asperiores fugiat quo ut ad laborum reprehenderit quasi. Sit dignissimos
+                            quasi deleniti atque qui est dolore delectus totam odit perferendis, accusantium vero illum
+                            quas. Esse reiciendis saepe animi iusto deleniti impedit, consequatur unde laudantium
+                            officiis ratione, beatae sint itaque iure laborum ea minima nostrum quos aspernatur nesciunt
+                            harum pariatur. Earum ipsum impedit voluptatum.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="timeline2" class="content2">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+                            velit quo eum pariatur debitis quisquam ducimus facilis repudiandae alias at? Tempora
+                            obcaecati alias molestiae voluptas magnam nulla molestias earum quia reiciendis. Adipisci
+                            incidunt porro excepturi voluptatum vero sequi, eaque maxime nobis ducimus officiis, cumque
+                            at eius. Accusamus ab sit unde?
+                        </p>
+                    </div>
+                </div>
+
+                <div id="rules2" class="content2">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos dolor at
+                            quisquam, nostrum quasi tempora quae accusamus necessitatibus. Dolorem sit consectetur in,
+                            officiis reprehenderit sed. Explicabo distinctio, consequatur fugiat consequuntur et quidem
+                            molestiae, esse quo enim corporis aut odit maiores quaerat praesentium? Aut iusto nisi,
+                            dolores tenetur at recusandae saepe corrupti ipsam, officia voluptas pariatur exercitationem
+                            nam alias eos soluta.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="contact2" class="content2">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ex
+                            eveniet fugiat quia eum numquam aliquid modi aspernatur veritatis illo.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <br>
+    <hr class="hr">
+    <br>
+
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 justify-items-center">
+
+        <div
+            class="py-10 ease-in-out col-span-1 mx-4 hover:drop-shadow-2xl cursor-pointer hover:shadow-slate-950 duration-1000">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm">
+                <img src="images/fun-activities.jpg" alt="" class="w-full">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Rangmanch
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="py-10 ease-in-out col-span-2 mx-4">
+
+            <div class="rounded overflow-hidden shadow-lg max-w-4xl">
+                <nav class="navbar navbar-expand-lg">
+                    <div id="navbarNavAltMarkup" class="navbar-collapse justify-content-center">
+                        <div class="navbar-nav">
+                            <a class="nav-link active" href="#"
+                                onclick="showContent3('about3'); return false;">ABOUT</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent3('structure3'); return false;">STRUCTURE</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent3('timeline3'); return false;">TIMELINE</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent3('rules3'); return false;">RULES</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent3('contact3'); return false;">CONTACT</a>
+                        </div>
+                    </div>
+                </nav>
+
+                <div id="about3" class="content3 active-content">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, rem
+                            at
+                            ea, tempora accusantium veniam, rerum tempore delectus blanditiis inventore temporibus eum.
+                            At
+                            error sequi, deleniti, eum quam optio illo repellat ducimus dolore minus libero delectus
+                            odit
+                            blanditiis animi provident quasi ad quo est? Dolorem, dignissimos! Iusto, commodi enim.
+                            Dolor
+                            aut corporis consequuntur expedita cupiditate dicta error soluta excepturi fuga hic, nulla
+                            voluptate minus ratione aliquid tempora eum at quas eveniet molestias porro suscipit beatae
+                            sit.
+                            Sapiente illum adipisci reprehenderit et dolor rerum eveniet est saepe at veritatis quia
+                            quaerat
+                            eum rem possimus similique ducimus voluptatibus quas, incidunt commodi ut.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="structure3" class="content3">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+                            tempore, laudantium molestias voluptas quod, rerum animi autem cum temporibus repellendus
+                            aperiam numquam asperiores fugiat quo ut ad laborum reprehenderit quasi. Sit dignissimos
+                            quasi deleniti atque qui est dolore delectus totam odit perferendis, accusantium vero illum
+                            quas. Esse reiciendis saepe animi iusto deleniti impedit, consequatur unde laudantium
+                            officiis ratione, beatae sint itaque iure laborum ea minima nostrum quos aspernatur nesciunt
+                            harum pariatur. Earum ipsum impedit voluptatum.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="timeline3" class="content3">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+                            velit quo eum pariatur debitis quisquam ducimus facilis repudiandae alias at? Tempora
+                            obcaecati alias molestiae voluptas magnam nulla molestias earum quia reiciendis. Adipisci
+                            incidunt porro excepturi voluptatum vero sequi, eaque maxime nobis ducimus officiis, cumque
+                            at eius. Accusamus ab sit unde?
+                        </p>
+                    </div>
+                </div>
+
+                <div id="rules3" class="content3">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos dolor at
+                            quisquam, nostrum quasi tempora quae accusamus necessitatibus. Dolorem sit consectetur in,
+                            officiis reprehenderit sed. Explicabo distinctio, consequatur fugiat consequuntur et quidem
+                            molestiae, esse quo enim corporis aut odit maiores quaerat praesentium? Aut iusto nisi,
+                            dolores tenetur at recusandae saepe corrupti ipsam, officia voluptas pariatur exercitationem
+                            nam alias eos soluta.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="contact3" class="content3">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ex
+                            eveniet fugiat quia eum numquam aliquid modi aspernatur veritatis illo.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <br>
+    <hr class="hr">
+    <br>
+
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 justify-items-center">
+
+        <div
+            class="py-10 ease-in-out col-span-1 mx-4 hover:drop-shadow-2xl cursor-pointer hover:shadow-slate-950 duration-1000">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm">
+                <img src="images/fun-activities.jpg" alt="" class="w-full">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Reels Recursive
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="py-10 ease-in-out col-span-2 mx-4">
+
+            <div class="rounded overflow-hidden shadow-lg max-w-4xl">
+                <nav class="navbar navbar-expand-lg">
+                    <div id="navbarNavAltMarkup" class="navbar-collapse justify-content-center">
+                        <div class="navbar-nav">
+                            <a class="nav-link active" href="#"
+                                onclick="showContent4('about4'); return false;">ABOUT</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent4('structure4'); return false;">STRUCTURE</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent4('timeline4'); return false;">TIMELINE</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent4('rules4'); return false;">RULES</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent4('contact4'); return false;">CONTACT</a>
+                        </div>
+                    </div>
+                </nav>
+
+                <div id="about4" class="content4 active-content">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, rem
+                            at
+                            ea, tempora accusantium veniam, rerum tempore delectus blanditiis inventore temporibus eum.
+                            At
+                            error sequi, deleniti, eum quam optio illo repellat ducimus dolore minus libero delectus
+                            odit
+                            blanditiis animi provident quasi ad quo est? Dolorem, dignissimos! Iusto, commodi enim.
+                            Dolor
+                            aut corporis consequuntur expedita cupiditate dicta error soluta excepturi fuga hic, nulla
+                            voluptate minus ratione aliquid tempora eum at quas eveniet molestias porro suscipit beatae
+                            sit.
+                            Sapiente illum adipisci reprehenderit et dolor rerum eveniet est saepe at veritatis quia
+                            quaerat
+                            eum rem possimus similique ducimus voluptatibus quas, incidunt commodi ut.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="structure4" class="content4">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+                            tempore, laudantium molestias voluptas quod, rerum animi autem cum temporibus repellendus
+                            aperiam numquam asperiores fugiat quo ut ad laborum reprehenderit quasi. Sit dignissimos
+                            quasi deleniti atque qui est dolore delectus totam odit perferendis, accusantium vero illum
+                            quas. Esse reiciendis saepe animi iusto deleniti impedit, consequatur unde laudantium
+                            officiis ratione, beatae sint itaque iure laborum ea minima nostrum quos aspernatur nesciunt
+                            harum pariatur. Earum ipsum impedit voluptatum.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="timeline4" class="content4">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+                            velit quo eum pariatur debitis quisquam ducimus facilis repudiandae alias at? Tempora
+                            obcaecati alias molestiae voluptas magnam nulla molestias earum quia reiciendis. Adipisci
+                            incidunt porro excepturi voluptatum vero sequi, eaque maxime nobis ducimus officiis, cumque
+                            at eius. Accusamus ab sit unde?
+                        </p>
+                    </div>
+                </div>
+
+                <div id="rules4" class="content4">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos dolor at
+                            quisquam, nostrum quasi tempora quae accusamus necessitatibus. Dolorem sit consectetur in,
+                            officiis reprehenderit sed. Explicabo distinctio, consequatur fugiat consequuntur et quidem
+                            molestiae, esse quo enim corporis aut odit maiores quaerat praesentium? Aut iusto nisi,
+                            dolores tenetur at recusandae saepe corrupti ipsam, officia voluptas pariatur exercitationem
+                            nam alias eos soluta.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="contact4" class="content4">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ex
+                            eveniet fugiat quia eum numquam aliquid modi aspernatur veritatis illo.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <br>
+    <hr class="hr">
+    <br>
+
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 justify-items-center">
+
+        <div
+            class="py-10 ease-in-out col-span-1 mx-4 hover:drop-shadow-2xl cursor-pointer hover:shadow-slate-950 duration-1000">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm">
+                <img src="images/fun-activities.jpg" alt="" class="w-full">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Photography
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="py-10 ease-in-out col-span-2 mx-4">
+
+            <div class="rounded overflow-hidden shadow-lg max-w-4xl">
+                <nav class="navbar navbar-expand-lg">
+                    <div id="navbarNavAltMarkup" class="navbar-collapse justify-content-center">
+                        <div class="navbar-nav">
+                            <a class="nav-link active" href="#"
+                                onclick="showContent5('about5'); return false;">ABOUT</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent5('structure5'); return false;">STRUCTURE</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent5('timeline5'); return false;">TIMELINE</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent5('rules5'); return false;">RULES</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent5('contact5'); return false;">CONTACT</a>
+                        </div>
+                    </div>
+                </nav>
+
+                <div id="about5" class="content5 active-content">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, rem
+                            at
+                            ea, tempora accusantium veniam, rerum tempore delectus blanditiis inventore temporibus eum.
+                            At
+                            error sequi, deleniti, eum quam optio illo repellat ducimus dolore minus libero delectus
+                            odit
+                            blanditiis animi provident quasi ad quo est? Dolorem, dignissimos! Iusto, commodi enim.
+                            Dolor
+                            aut corporis consequuntur expedita cupiditate dicta error soluta excepturi fuga hic, nulla
+                            voluptate minus ratione aliquid tempora eum at quas eveniet molestias porro suscipit beatae
+                            sit.
+                            Sapiente illum adipisci reprehenderit et dolor rerum eveniet est saepe at veritatis quia
+                            quaerat
+                            eum rem possimus similique ducimus voluptatibus quas, incidunt commodi ut.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="structure5" class="content5">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+                            tempore, laudantium molestias voluptas quod, rerum animi autem cum temporibus repellendus
+                            aperiam numquam asperiores fugiat quo ut ad laborum reprehenderit quasi. Sit dignissimos
+                            quasi deleniti atque qui est dolore delectus totam odit perferendis, accusantium vero illum
+                            quas. Esse reiciendis saepe animi iusto deleniti impedit, consequatur unde laudantium
+                            officiis ratione, beatae sint itaque iure laborum ea minima nostrum quos aspernatur nesciunt
+                            harum pariatur. Earum ipsum impedit voluptatum.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="timeline5" class="content5">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+                            velit quo eum pariatur debitis quisquam ducimus facilis repudiandae alias at? Tempora
+                            obcaecati alias molestiae voluptas magnam nulla molestias earum quia reiciendis. Adipisci
+                            incidunt porro excepturi voluptatum vero sequi, eaque maxime nobis ducimus officiis, cumque
+                            at eius. Accusamus ab sit unde?
+                        </p>
+                    </div>
+                </div>
+
+                <div id="rules5" class="content5">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos dolor at
+                            quisquam, nostrum quasi tempora quae accusamus necessitatibus. Dolorem sit consectetur in,
+                            officiis reprehenderit sed. Explicabo distinctio, consequatur fugiat consequuntur et quidem
+                            molestiae, esse quo enim corporis aut odit maiores quaerat praesentium? Aut iusto nisi,
+                            dolores tenetur at recusandae saepe corrupti ipsam, officia voluptas pariatur exercitationem
+                            nam alias eos soluta.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="contact5" class="content5">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ex
+                            eveniet fugiat quia eum numquam aliquid modi aspernatur veritatis illo.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <br>
+    <hr class="hr">
+    <br>
+
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 justify-items-center">
+
+        <div
+            class="py-10 ease-in-out col-span-1 mx-4 hover:drop-shadow-2xl cursor-pointer hover:shadow-slate-950 duration-1000">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm">
+                <img src="images/fun-activities.jpg" alt="" class="w-full">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Cinematography
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="py-10 ease-in-out col-span-2 mx-4">
+
+            <div class="rounded overflow-hidden shadow-lg max-w-4xl">
+                <nav class="navbar navbar-expand-lg">
+                    <div id="navbarNavAltMarkup" class="navbar-collapse justify-content-center">
+                        <div class="navbar-nav">
+                            <a class="nav-link active" href="#"
+                                onclick="showContent6('about6'); return false;">ABOUT</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent6('structure6'); return false;">STRUCTURE</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent6('timeline6'); return false;">TIMELINE</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent6('rules6'); return false;">RULES</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent6('contact6'); return false;">CONTACT</a>
+                        </div>
+                    </div>
+                </nav>
+
+                <div id="about6" class="content6 active-content">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, rem
+                            at
+                            ea, tempora accusantium veniam, rerum tempore delectus blanditiis inventore temporibus eum.
+                            At
+                            error sequi, deleniti, eum quam optio illo repellat ducimus dolore minus libero delectus
+                            odit
+                            blanditiis animi provident quasi ad quo est? Dolorem, dignissimos! Iusto, commodi enim.
+                            Dolor
+                            aut corporis consequuntur expedita cupiditate dicta error soluta excepturi fuga hic, nulla
+                            voluptate minus ratione aliquid tempora eum at quas eveniet molestias porro suscipit beatae
+                            sit.
+                            Sapiente illum adipisci reprehenderit et dolor rerum eveniet est saepe at veritatis quia
+                            quaerat
+                            eum rem possimus similique ducimus voluptatibus quas, incidunt commodi ut.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="structure6" class="content6">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+                            tempore, laudantium molestias voluptas quod, rerum animi autem cum temporibus repellendus
+                            aperiam numquam asperiores fugiat quo ut ad laborum reprehenderit quasi. Sit dignissimos
+                            quasi deleniti atque qui est dolore delectus totam odit perferendis, accusantium vero illum
+                            quas. Esse reiciendis saepe animi iusto deleniti impedit, consequatur unde laudantium
+                            officiis ratione, beatae sint itaque iure laborum ea minima nostrum quos aspernatur nesciunt
+                            harum pariatur. Earum ipsum impedit voluptatum.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="timeline6" class="content6">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+                            velit quo eum pariatur debitis quisquam ducimus facilis repudiandae alias at? Tempora
+                            obcaecati alias molestiae voluptas magnam nulla molestias earum quia reiciendis. Adipisci
+                            incidunt porro excepturi voluptatum vero sequi, eaque maxime nobis ducimus officiis, cumque
+                            at eius. Accusamus ab sit unde?
+                        </p>
+                    </div>
+                </div>
+
+                <div id="rules6" class="content6">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos dolor at
+                            quisquam, nostrum quasi tempora quae accusamus necessitatibus. Dolorem sit consectetur in,
+                            officiis reprehenderit sed. Explicabo distinctio, consequatur fugiat consequuntur et quidem
+                            molestiae, esse quo enim corporis aut odit maiores quaerat praesentium? Aut iusto nisi,
+                            dolores tenetur at recusandae saepe corrupti ipsam, officia voluptas pariatur exercitationem
+                            nam alias eos soluta.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="contact6" class="content6">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ex
+                            eveniet fugiat quia eum numquam aliquid modi aspernatur veritatis illo.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <br>
+    <hr class="hr">
+    <br>
+
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 justify-items-center">
+
+        <div
+            class="py-10 ease-in-out col-span-1 mx-4 hover:drop-shadow-2xl cursor-pointer hover:shadow-slate-950 duration-1000">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm">
+                <img src="images/fun-activities.jpg" alt="" class="w-full">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">FashionIsta
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="py-10 ease-in-out col-span-2 mx-4">
+
+            <div class="rounded overflow-hidden shadow-lg max-w-4xl">
+                <nav class="navbar navbar-expand-lg">
+                    <div id="navbarNavAltMarkup" class="navbar-collapse justify-content-center">
+                        <div class="navbar-nav">
+                            <a class="nav-link active" href="#"
+                                onclick="showContent7('about7'); return false;">ABOUT</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent7('structure7'); return false;">STRUCTURE</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent7('timeline7'); return false;">TIMELINE</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent7('rules7'); return false;">RULES</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent7('contact7'); return false;">CONTACT</a>
+                        </div>
+                    </div>
+                </nav>
+
+                <div id="about7" class="content7 active-content">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, rem
+                            at
+                            ea, tempora accusantium veniam, rerum tempore delectus blanditiis inventore temporibus eum.
+                            At
+                            error sequi, deleniti, eum quam optio illo repellat ducimus dolore minus libero delectus
+                            odit
+                            blanditiis animi provident quasi ad quo est? Dolorem, dignissimos! Iusto, commodi enim.
+                            Dolor
+                            aut corporis consequuntur expedita cupiditate dicta error soluta excepturi fuga hic, nulla
+                            voluptate minus ratione aliquid tempora eum at quas eveniet molestias porro suscipit beatae
+                            sit.
+                            Sapiente illum adipisci reprehenderit et dolor rerum eveniet est saepe at veritatis quia
+                            quaerat
+                            eum rem possimus similique ducimus voluptatibus quas, incidunt commodi ut.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="structure7" class="content7">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+                            tempore, laudantium molestias voluptas quod, rerum animi autem cum temporibus repellendus
+                            aperiam numquam asperiores fugiat quo ut ad laborum reprehenderit quasi. Sit dignissimos
+                            quasi deleniti atque qui est dolore delectus totam odit perferendis, accusantium vero illum
+                            quas. Esse reiciendis saepe animi iusto deleniti impedit, consequatur unde laudantium
+                            officiis ratione, beatae sint itaque iure laborum ea minima nostrum quos aspernatur nesciunt
+                            harum pariatur. Earum ipsum impedit voluptatum.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="timeline7" class="content7">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+                            velit quo eum pariatur debitis quisquam ducimus facilis repudiandae alias at? Tempora
+                            obcaecati alias molestiae voluptas magnam nulla molestias earum quia reiciendis. Adipisci
+                            incidunt porro excepturi voluptatum vero sequi, eaque maxime nobis ducimus officiis, cumque
+                            at eius. Accusamus ab sit unde?
+                        </p>
+                    </div>
+                </div>
+
+                <div id="rules7" class="content7">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos dolor at
+                            quisquam, nostrum quasi tempora quae accusamus necessitatibus. Dolorem sit consectetur in,
+                            officiis reprehenderit sed. Explicabo distinctio, consequatur fugiat consequuntur et quidem
+                            molestiae, esse quo enim corporis aut odit maiores quaerat praesentium? Aut iusto nisi,
+                            dolores tenetur at recusandae saepe corrupti ipsam, officia voluptas pariatur exercitationem
+                            nam alias eos soluta.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="contact7" class="content7">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ex
+                            eveniet fugiat quia eum numquam aliquid modi aspernatur veritatis illo.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <br>
+    <hr class="hr">
+    <br>
+
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 justify-items-center">
+
+        <div
+            class="py-10 ease-in-out col-span-1 mx-4 hover:drop-shadow-2xl cursor-pointer hover:shadow-slate-950 duration-1000">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm">
+                <img src="images/fun-activities.jpg" alt="" class="w-full">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Standup
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="py-10 ease-in-out col-span-2 mx-4">
+
+            <div class="rounded overflow-hidden shadow-lg max-w-4xl">
+                <nav class="navbar navbar-expand-lg">
+                    <div id="navbarNavAltMarkup" class="navbar-collapse justify-content-center">
+                        <div class="navbar-nav">
+                            <a class="nav-link active" href="#"
+                                onclick="showContent8('about8'); return false;">ABOUT</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent8('structure8'); return false;">STRUCTURE</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent8('timeline8'); return false;">TIMELINE</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent8('rules8'); return false;">RULES</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent8('contact8'); return false;">CONTACT</a>
+                        </div>
+                    </div>
+                </nav>
+
+                <div id="about8" class="content8 active-content">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, rem
+                            at
+                            ea, tempora accusantium veniam, rerum tempore delectus blanditiis inventore temporibus eum.
+                            At
+                            error sequi, deleniti, eum quam optio illo repellat ducimus dolore minus libero delectus
+                            odit
+                            blanditiis animi provident quasi ad quo est? Dolorem, dignissimos! Iusto, commodi enim.
+                            Dolor
+                            aut corporis consequuntur expedita cupiditate dicta error soluta excepturi fuga hic, nulla
+                            voluptate minus ratione aliquid tempora eum at quas eveniet molestias porro suscipit beatae
+                            sit.
+                            Sapiente illum adipisci reprehenderit et dolor rerum eveniet est saepe at veritatis quia
+                            quaerat
+                            eum rem possimus similique ducimus voluptatibus quas, incidunt commodi ut.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="structure8" class="content8">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+                            tempore, laudantium molestias voluptas quod, rerum animi autem cum temporibus repellendus
+                            aperiam numquam asperiores fugiat quo ut ad laborum reprehenderit quasi. Sit dignissimos
+                            quasi deleniti atque qui est dolore delectus totam odit perferendis, accusantium vero illum
+                            quas. Esse reiciendis saepe animi iusto deleniti impedit, consequatur unde laudantium
+                            officiis ratione, beatae sint itaque iure laborum ea minima nostrum quos aspernatur nesciunt
+                            harum pariatur. Earum ipsum impedit voluptatum.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="timeline8" class="content8">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+                            velit quo eum pariatur debitis quisquam ducimus facilis repudiandae alias at? Tempora
+                            obcaecati alias molestiae voluptas magnam nulla molestias earum quia reiciendis. Adipisci
+                            incidunt porro excepturi voluptatum vero sequi, eaque maxime nobis ducimus officiis, cumque
+                            at eius. Accusamus ab sit unde?
+                        </p>
+                    </div>
+                </div>
+
+                <div id="rules8" class="content8">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos dolor at
+                            quisquam, nostrum quasi tempora quae accusamus necessitatibus. Dolorem sit consectetur in,
+                            officiis reprehenderit sed. Explicabo distinctio, consequatur fugiat consequuntur et quidem
+                            molestiae, esse quo enim corporis aut odit maiores quaerat praesentium? Aut iusto nisi,
+                            dolores tenetur at recusandae saepe corrupti ipsam, officia voluptas pariatur exercitationem
+                            nam alias eos soluta.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="contact8" class="content8">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ex
+                            eveniet fugiat quia eum numquam aliquid modi aspernatur veritatis illo.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <br>
+    <hr class="hr">
+    <br>
+
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 justify-items-center">
+
+        <div
+            class="py-10 ease-in-out col-span-1 mx-4 hover:drop-shadow-2xl cursor-pointer hover:shadow-slate-950 duration-1000">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm">
+                <img src="images/fun-activities.jpg" alt="" class="w-full">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Comedy/Mimicry
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="py-10 ease-in-out col-span-2 mx-4">
+
+            <div class="rounded overflow-hidden shadow-lg max-w-4xl">
+                <nav class="navbar navbar-expand-lg">
+                    <div id="navbarNavAltMarkup" class="navbar-collapse justify-content-center">
+                        <div class="navbar-nav">
+                            <a class="nav-link active" href="#"
+                                onclick="showContent9('about9'); return false;">ABOUT</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent9('structure9'); return false;">STRUCTURE</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent9('timeline9'); return false;">TIMELINE</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent9('rules9'); return false;">RULES</a>
+                            <a class="nav-link active" href="#"
+                                onclick="showContent9('contact9'); return false;">CONTACT</a>
+                        </div>
+                    </div>
+                </nav>
+
+                <div id="about9" class="content9 active-content">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, rem
+                            at
+                            ea, tempora accusantium veniam, rerum tempore delectus blanditiis inventore temporibus eum.
+                            At
+                            error sequi, deleniti, eum quam optio illo repellat ducimus dolore minus libero delectus
+                            odit
+                            blanditiis animi provident quasi ad quo est? Dolorem, dignissimos! Iusto, commodi enim.
+                            Dolor
+                            aut corporis consequuntur expedita cupiditate dicta error soluta excepturi fuga hic, nulla
+                            voluptate minus ratione aliquid tempora eum at quas eveniet molestias porro suscipit beatae
+                            sit.
+                            Sapiente illum adipisci reprehenderit et dolor rerum eveniet est saepe at veritatis quia
+                            quaerat
+                            eum rem possimus similique ducimus voluptatibus quas, incidunt commodi ut.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="structure9" class="content9">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+                            tempore, laudantium molestias voluptas quod, rerum animi autem cum temporibus repellendus
+                            aperiam numquam asperiores fugiat quo ut ad laborum reprehenderit quasi. Sit dignissimos
+                            quasi deleniti atque qui est dolore delectus totam odit perferendis, accusantium vero illum
+                            quas. Esse reiciendis saepe animi iusto deleniti impedit, consequatur unde laudantium
+                            officiis ratione, beatae sint itaque iure laborum ea minima nostrum quos aspernatur nesciunt
+                            harum pariatur. Earum ipsum impedit voluptatum.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="timeline9" class="content9">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+                            velit quo eum pariatur debitis quisquam ducimus facilis repudiandae alias at? Tempora
+                            obcaecati alias molestiae voluptas magnam nulla molestias earum quia reiciendis. Adipisci
+                            incidunt porro excepturi voluptatum vero sequi, eaque maxime nobis ducimus officiis, cumque
+                            at eius. Accusamus ab sit unde?
+                        </p>
+                    </div>
+                </div>
+
+                <div id="rules9" class="content9">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos dolor at
+                            quisquam, nostrum quasi tempora quae accusamus necessitatibus. Dolorem sit consectetur in,
+                            officiis reprehenderit sed. Explicabo distinctio, consequatur fugiat consequuntur et quidem
+                            molestiae, esse quo enim corporis aut odit maiores quaerat praesentium? Aut iusto nisi,
+                            dolores tenetur at recusandae saepe corrupti ipsam, officia voluptas pariatur exercitationem
+                            nam alias eos soluta.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="contact9" class="content9">
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ex
+                            eveniet fugiat quia eum numquam aliquid modi aspernatur veritatis illo.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    
+
+              
+
+
+    <script>
+        function showContent(contentId) {
+            // Hide all content areas
+            const contentAreas = document.querySelectorAll('.content');
+            contentAreas.forEach(content => content.style.display = 'none');
+
+            // Show the selected content
+            document.getElementById(contentId).style.display = 'block';
+        }
+    </script>
+
+    <script>
+        function showContent2(contentId) {
+            // Hide all content areas
+            const contentAreas = document.querySelectorAll('.content2');
+            contentAreas.forEach(content => content2.style.display = 'none');
+
+            // Show the selected content
+            document.getElementById(contentId).style.display = 'block';
+        }
+    </script>
+
+    <script>
+        function showContent3(contentId) {
+            // Hide all content areas
+            const contentAreas = document.querySelectorAll('.content3');
+            contentAreas.forEach(content => content.style.display = 'none');
+
+            // Show the selected content
+            document.getElementById(contentId).style.display = 'block';
+        }
+    </script>
+
+    <script>
+        function showContent4(contentId) {
+            // Hide all content areas
+            const contentAreas = document.querySelectorAll('.content4');
+            contentAreas.forEach(content => content.style.display = 'none');
+
+            // Show the selected content
+            document.getElementById(contentId).style.display = 'block';
+        }
+    </script>
+
+    <script>
+        function showContent5(contentId) {
+            // Hide all content areas
+            const contentAreas = document.querySelectorAll('.content5');
+            contentAreas.forEach(content => content.style.display = 'none');
+
+            // Show the selected content
+            document.getElementById(contentId).style.display = 'block';
+        }
+    </script>
+
+    <script>
+        function showContent6(contentId) {
+            // Hide all content areas
+            const contentAreas = document.querySelectorAll('.content6');
+            contentAreas.forEach(content => content.style.display = 'none');
+
+            // Show the selected content
+            document.getElementById(contentId).style.display = 'block';
+        }
+    </script>
+
+    <script>
+        function showContent7(contentId) {
+            // Hide all content areas
+            const contentAreas = document.querySelectorAll('.content7');
+            contentAreas.forEach(content => content.style.display = 'none');
+
+            // Show the selected content
+            document.getElementById(contentId).style.display = 'block';
+        }
+    </script>
+
+    <script>
+        function showContent8(contentId) {
+            // Hide all content areas
+            const contentAreas = document.querySelectorAll('.content8');
+            contentAreas.forEach(content => content.style.display = 'none');
+
+            // Show the selected content
+            document.getElementById(contentId).style.display = 'block';
+        }
+    </script>
+
+    <script>
+        function showContent9(contentId) {
+            // Hide all content areas
+            const contentAreas = document.querySelectorAll('.content9');
+            contentAreas.forEach(content => content.style.display = 'none');
+
+            // Show the selected content
+            document.getElementById(contentId).style.display = 'block';
+        }
+    </script>
+
+
+</body>
+
+</html>
