@@ -1,3 +1,10 @@
+/* Media query breakpoints:
+300px
+795px
+
+
+
+*/
 @media (max-width: 1024px) {
   html {
     font-size: 85%;
