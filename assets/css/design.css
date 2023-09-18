@@ -170,13 +170,21 @@ nav {
   min-height: fit-content;
 }
 
+.hero-graphics {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5rem;
+  margin: auto 0rem;
+  justify-content: space-evenly;
+}
+
 .hero-text {
-  display: inline-block;
-  position: absolute;
+  /* display: inline-block; */
   left: 8rem;
   text-align: left;
-  top: calc(50% - 9rem);
-  margin-left: 5rem;
+  /* top: calc(50% - 9rem);
+  margin-left: 5rem; */
   width: 35%;
 }
 
@@ -201,10 +209,18 @@ nav {
 
 .hero-image img {
   height: 30rem;
-  margin-left: 40rem;
+  /* margin-left: 40rem;
   margin-top: -2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2rem; */
   /* box-shadow: 10px 10px 20px rgba(30, 20, 73, 0.263); */
+}
+
+img.floating {
+  margin-bottom: 2rem;
+}
+
+.glass-img {
+  position: relative;
 }
 
 .glassmorph {
@@ -222,8 +238,8 @@ nav {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  top: 60%;
-  left: 55%;
+  top: 50%;
+  left: 0%;
   animation-name: floating;
   animation-duration: 7s;
   animation-iteration-count: infinite;
@@ -236,8 +252,8 @@ nav {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  top: 25%;
-  left: 80%;
+  top: 15%;
+  left: 75%;
   animation-name: floating;
   animation-duration: 5s;
   animation-iteration-count: infinite;
@@ -379,6 +395,10 @@ nav {
   margin-top: 2rem;
 }
 
+#exciting-events h1 {
+  margin-bottom: 2rem;
+}
+
 .card {
   border-radius: 20px;
   overflow: hidden;
@@ -387,6 +407,11 @@ nav {
 
 .card:hover {
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.07);
+}
+
+.square-box {
+  width: 100% !important;
+  justify-content: space-around;
 }
 
 .register-btn {
@@ -456,4 +481,5 @@ footer hr {
 
 .footer-contact-mail {
   color: #92f8ff;
+  font-size: inherit;
 }
