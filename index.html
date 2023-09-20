@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,15 @@
     <link rel="shortcut icon" href="assets/images/Insignia final logosArtboard 1.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/design.css">
-       <link rel="stylesheet" href="assets/css/mediaq.css">
+    <link rel="stylesheet" href="assets/css/mediaq.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Patua+One&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
+      
        .custom-toggler-icon {
             width: 30px;
             height: 3px;
@@ -30,11 +32,28 @@
 
         
 
+
+
         a{
+
             margin-inline: 14px;
             color: black;
             font-family: Arial, Helvetica, sans-serif;
             font-size: 17px;
+        }
+
+        .custom-toggler-icon {
+            width: 30px;
+            height: 3px;
+            background: linear-gradient(90deg,rgb(49, 101, 139) 0% , plum 100%);
+            margin: 4px 0;
+            display: block;
+                
+        }
+
+        .navbar-toggler {
+            float: left;
+            margin-left: 0%;
         }
 
         body {
@@ -45,21 +64,23 @@
             text-align: center;
             overflow-x: hidden;
         }
-      header{
-        font-family: 'Times New Roman', Times, serif;
-        width: 100%;
-        
-      }
+
+        header {
+            font-family: 'Times New Roman', Times, serif;
+            width: 100%;
+
+        }
 
         .navbar-brand img {
             max-height: 3.75rem;
         }
-      /* for navbar */
-       .container {
+
+        /* for navbar */
+        .container {
             max-width: 100%;
             max-height: auto;
             margin: 0 auto;
-             padding: 10px;
+            padding: 10px;
         }
 
         .event-description {
@@ -74,7 +95,7 @@
             transform: translate(-50%, -50%);
             z-index: 1;
             padding: 15px;
-            background-color: rgba(0, 0, 0, 0.7); 
+            background-color: rgba(0, 0, 0, 0.7);
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
             min-height: fit-content;
@@ -82,8 +103,8 @@
 
         .image-slider {
             width: 90%;
-            height: auto; 
-            max-height: 80vh; 
+            height: auto;
+            max-height: 80vh;
             overflow: hidden;
             position: relative;
         }
@@ -98,150 +119,177 @@
             height: 80vh;
             object-fit: cover;
         }
-       h2{
-        font-family: inherit
-       }
+
+        h2 {
+            font-family: inherit
+        }
 
         @keyframes slide {
-            0% { transform: translateX(0); }
-            20% { transform: translateX(-100%); }
-            40% { transform: translateX(-200%); }
-            60% { transform: translateX(-300%); }
-            80% { transform: translateX(-400%); }
-            100% { transform: translateX(-500%); }
+            0% {
+                transform: translateX(0);
+            }
+
+            20% {
+                transform: translateX(-100%);
+            }
+
+            40% {
+                transform: translateX(-200%);
+            }
+
+            60% {
+                transform: translateX(-300%);
+            }
+
+            80% {
+                transform: translateX(-400%);
+            }
+
+            100% {
+                transform: translateX(-500%);
+            }
         }
+
         @media (min-width: 300px) and (max-width: 795px) {
-        
+
             .event-description {
-                top: 50%; 
-                width: 50%; 
+                top: 50%;
+                width: 50%;
                 font-size: 18px;
             }
+
             .container {
-                width: 90%; 
-               
+                width: 90%;
+
             }
-         #left {
-           margin-left: -35%;
-        }
-    
-        #right {
-           margin-right:-35%;
-        }
-        }
-        @media  (min-width: 800px) and (max-width: 1280px){
 
             #left {
-           margin-left: -20%;
+                margin-left: -35%;
+            }
+
+            #right {
+                margin-right: -35%;
+            }
         }
-    
-        #right {
-           margin-right:-20%;
+
+        @media (min-width: 800px) and (max-width: 1280px) {
+
+            #left {
+                margin-left: -20%;
+            }
+
+            #right {
+                margin-right: -20%;
+            }
         }
-        }
-        
+
         .event-card {
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
         }
 
         .event-card img {
             max-width: 100%;
             height: auto;
         }
+
         .card:hover {
             transition: transform 0.2s ease;
-            transform: scale(1.05);    
+            transform: scale(1.05);
         }
-   
-    .trophy-img {
+
+        .trophy-img {
             max-width: 50px;
         }
-       
+
         .trophy-decoration {
             position: absolute;
             top: 2%;
-            
+
         }
-    
+
         .left {
             left: 30%;
         }
-    
+
         .right {
             right: 30%;
         }
-       
-  .events{
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-  
-#title-sponsors {
-    background-color: #f8f8f8;
-    padding: 40px 0;
-}
 
-.sponsor-card {
-    text-align: center;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    transition: transform 0.7s ease-in-out;
-}
-
-.sponsor-card:hover {
-    transform: scale(1.05);
-}
-
-
-.square-box:hover {
-    transform: scale(1.05);
-}
-.square-box {
-    display: flex;
-    align-items: center;
-    width: 80%;
-    margin-bottom: 10px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.square-box .btn {
-    color: #000;
-    text-align: center;
-    padding: 10px;
-    border: 2px solid transparent;
-    border-image: linear-gradient(to bottom, #4e4eb6, #952fb5);
-    border-image-slice: 1;
-    flex-grow: 1;
-   
-}
-
-.square-box .btn:hover {
-    background-color: #4e4eb6;
-    color: #fff;
-}
-@media (min-width: 770px) and (max-width: 1195px) {
-        
-    .square-box {
-    display: flex;
-    align-items: center;
-    width: 40%;
-    margin-bottom: 10px;
-    margin-left: 2px;
-    margin-right: 2px;
-}
+        .events {
+            margin-left: 20px;
+            margin-right: 20px;
         }
 
+        #title-sponsors {
+            background-color: #f8f8f8;
+            padding: 40px 0;
+        }
+
+        .sponsor-card {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: transform 0.7s ease-in-out;
+        }
+
+        .sponsor-card:hover {
+            transform: scale(1.05);
+        }
+
+
+        .square-box:hover {
+            transform: scale(1.05);
+        }
+
+        .square-box {
+            display: flex;
+            align-items: center;
+            width: 80%;
+            margin-bottom: 10px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .square-box .btn {
+            color: #000;
+            text-align: center;
+            padding: 10px;
+            border: 2px solid transparent;
+            border-image: linear-gradient(to bottom, #4e4eb6, #952fb5);
+            border-image-slice: 1;
+            flex-grow: 1;
+
+        }
+
+        .square-box .btn:hover {
+            background-color: #4e4eb6;
+            color: #fff;
+        }
+
+        @media (min-width: 770px) and (max-width: 1195px) {
+
+            .square-box {
+                display: flex;
+                align-items: center;
+                width: 40%;
+                margin-bottom: 10px;
+                margin-left: 2px;
+                margin-right: 2px;
+            }
+        }
     </style>
 </head>
+
 <body>
     <header>
-        
+
+                        <!-- <ul class="navbar-nav ml-auto">
+
     <div class="hero-section">
         <nav class="navbar navbar-expand-lg bg-blur">
             <div class="container">
@@ -312,41 +360,46 @@
                     </ul>
                    </div>
                     <!-- <ul class="navbar-nav ml-auto">
+
   
                     </ul> -->
+                    </div>
                 </div>
-            </div>
-            <!-- <div class="bg-blur"></div> -->
+                <!-- <div class="bg-blur"></div> -->
             </nav>
             <div class="hero-graphics">
-<div class="hero-text">
-    <h1>INSIGNIA <span class="year">2023</span></h1>
-    <!-- <h1 class="year"></h1> -->
-    <p>The embodiment of your college experience. Technical, Cultural, Magical.</p>
-    <!-- HTML !-->
-<button class="button-64" role="button" onclick = "window.location.href='#exciting-events';"><span class="text">Register Now &#8595;	</span></button>
-</div>
+                <div class="hero-text">
+                    <h1>INSIGNIA <span class="year">2023</span></h1>
+                    <!-- <h1 class="year"></h1> -->
+                    <p>The embodiment of your college experience. Technical, Cultural, Magical.</p>
+                    <!-- HTML !-->
+                    <button class="button-64" role="button" onclick="window.location.href='#exciting-events';"><span
+                            class="text">Register Now &#8595; </span></button>
+                </div>
 
 
-<div class="glass-img">
-<div class="glassmorph crc1"></div>
-<div class="glassmorph crc2"></div>
+                <div class="glass-img">
+                    <div class="glassmorph crc1"></div>
+                    <div class="glassmorph crc2"></div>
 
-        <div class="hero-image">
-            <img src="assets/images/hero-image.png" alt="3d-illustration of a man on a computer" class="floating">
-        </div>
-    </div>
-        </div>      
+                    <div class="hero-image">
+                        <img src="assets/images/hero-image.png" alt="3d-illustration of a man on a computer"
+                            class="floating">
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
     <div class="image-slider">
         <div class="event-description">
-            
+
             <p>
-                 <span class="Title-Times">INSIGNIA’ 2023 <br><br>
-                INSIGNIA is the ultimate Inter-Institute event for showcasing your skills and having fun. Our range of technical and cultural events along with expert photography, exciting prizes, and  electrifying beats of our DJ  guarantee an unforgettable experience.
-            </span>
+                <span class="Title-Times">INSIGNIA’ 2023 <br><br>
+                    INSIGNIA is the ultimate Inter-Institute event for showcasing your skills and having fun. Our range
+                    of technical and cultural events along with expert photography, exciting prizes, and electrifying
+                    beats of our DJ guarantee an unforgettable experience.
+                </span>
             </p>
         </div>
 
@@ -365,10 +418,11 @@
             <img src="assets/images/mobile-gaming.jpg" alt="img-9">
             <img src="assets/images/dance.jpg" alt="img-14">
             <img src="assets/images/ingniapic.jpg" alt="img-15">
-           
-           
+
+
         </div>
     </div>
+
 <br>
 <div id="title-sponsors" class="container mt-5">
     <h1 class="text-center mb-4"> <span class="Title-Times">Title Sponsor</span></h1>
@@ -400,68 +454,104 @@
                         <a href="#registration-technical" class="btn btn-small">Explore</a>
                         <a href="#registration-technical" class="btn btn-small">Register</a>
                     </div>
+
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="col-md-4 col-sm-6 mb-4">
-            <div class="card">
-                <img src="assets/images/cultural-event.jpg" class="card-img-top" alt="Cultural Events">
-                <div class="card-body">
-                    <h2 class="card-title">Cultural Events</h2>
-                    <p class="card-text">Experience the magic of art, music, and talent in our Cultural Events. It's a celebration of creativity, where traditions meet modernity.</p>
-                    <div class="square-box">
-                        <a href="#cultural-events" class="btn btn-small">Explore</a>
-                        <a href="#registration-cultural" class="btn btn-small">Register</a>
+
+
+
+    <div class="container mt-4">
+
+        <section class="events" id="exciting-events">
+            <h1 class="text-center"><span class="Title-Times">Exciting Events!</span></h1>
+        </section>
+        <div class="row">
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="assets/images/technical-event.jpg" class="card-img-top" alt="Technical Events">
+                    <div class="card-body">
+                        <h2 class="card-title">Technical Events</h2>
+                        <p class="card-text">Prepare yourself for thrilling technological challenges that will put your
+                            knowledge to the test. Experience an unforgettable event with us!</p>
+                        <div class="square-box">
+                            <a href="#registration-technical" class="btn btn-small">Explore</a>
+                            <a href="#registration-technical" class="btn btn-small">Register</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="col-md-4 col-sm-6 mb-4">
-            <div class="card">
-                <img src="assets/images/fun-activity1.jpg" class="card-img-top" alt="Fun Activities">
-                <div class="card-body">
-                    <h2 class="card-title">Fun Activities</h2>
-                    <p class="card-text">Join the adventure in our Fun Activities, from treasure hunts to box cricket. It's all about having a blast and making memories!</p>
-                    <div class="square-box">
-                        <a href="#fun-activities" class="btn btn-small">Explore</a>
-                        <a href="#registration-fun" class="btn btn-small">Register</a>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="assets/images/cultural-event.jpg" class="card-img-top" alt="Cultural Events">
+                    <div class="card-body">
+                        <h2 class="card-title">Cultural Events</h2>
+                        <p class="card-text">Experience the magic of art, music, and talent in our Cultural Events. It's
+                            a celebration of creativity, where traditions meet modernity.</p>
+                        <div class="square-box">
+                            <a href="#cultural-events" class="btn btn-small">Explore</a>
+                            <a href="#registration-cultural" class="btn btn-small">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="assets/images/fun-activity1.jpg" class="card-img-top" alt="Fun Activities">
+                    <div class="card-body">
+                        <h2 class="card-title">Fun Activities</h2>
+                        <p class="card-text">Join the adventure in our Fun Activities, from treasure hunts to box
+                            cricket. It's all about having a blast and making memories!</p>
+                        <div class="square-box">
+                            <a href="#fun-activities" class="btn btn-small">Explore</a>
+                            <a href="#registration-fun" class="btn btn-small">Register</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
 
 
-    
+
     <div class="container mt-4" id="talent">
         <header class="text-center mb-4 position-relative">
-           
+
             <div class="trophy-decoration left" id="left">
                 <img src="assets/images/trophy.gif" alt="Trophy" class="img-fluid trophy-img">
             </div>
+
     
             <h1 class="mt-0">Reveal Talent!</h1>
             <h5>Do you have a hidden talent waiting to be discovered?</h5>
-    
-           
+
+
+
             <div class="trophy-decoration right" id="right">
                 <img src="assets/images/trophy.gif" alt="Trophy" class="img-fluid trophy-img">
             </div>
         </header>
-    
+
         <div class="row">
-           
+
             <div class="col-md-8 offset-md-2 text-center">
                 <div class="talent">
                     <ul class="text-left">
-                        <li>Join us at Insignia 2023 and let your skills shine! Whether you're an aspiring artist, a tech genius, or a passionate performer, we have the perfect platform for you to showcase your talents. Our events are designed to bring out the best in you and provide a stage where you can leave a mark.</li>
-                        <li>Don't miss this opportunity to unleash your creativity, connect with like-minded individuals, and be part of an unforgettable experience. Join us at Insignia and make your mark in the world of talent and innovation!</li>
+                        <li>Join us at Insignia 2023 and let your skills shine! Whether you're an aspiring artist, a
+                            tech genius, or a passionate performer, we have the perfect platform for you to showcase
+                            your talents. Our events are designed to bring out the best in you and provide a stage where
+                            you can leave a mark.</li>
+                        <li>Don't miss this opportunity to unleash your creativity, connect with like-minded
+                            individuals, and be part of an unforgettable experience. Join us at Insignia and make your
+                            mark in the world of talent and innovation!</li>
                     </ul>
-                    <a href="#registration-section" class="btn btn-primary mt-3 register-btn"> <span>Register Now!</span></a>
+                    <a href="#registration-section" class="btn btn-primary mt-3 register-btn"> <span>Register
+                            Now!</span></a>
                 </div>
             </div>
         </div>
@@ -471,7 +561,7 @@
             <h1>About Us</h1>
             <h5>Discover who we are and our mission.</h5>
         </header>
-    
+
         <div class="row">
             <div class="col-md-8 offset-md-2 text-center">
                 <div class="about-us-content">
@@ -479,34 +569,44 @@
                         <div class="card">
                             <div class="card-header" id="teamHeading">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#teamCollapse" aria-expanded="true" aria-controls="teamCollapse">
-                                         About Our Team
+                                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                                        data-target="#teamCollapse" aria-expanded="true" aria-controls="teamCollapse">
+                                        About Our Team
                                     </button>
                                 </h2>
                             </div>
-    
-                            <div id="teamCollapse" class="collapse show" aria-labelledby="teamHeading" data-parent="#aboutUsAccordion">
+
+                            <div id="teamCollapse" class="collapse show" aria-labelledby="teamHeading"
+                                data-parent="#aboutUsAccordion">
                                 <div class="card-body">
+
+
                                     <img src="assets/images/fashion.jpg" alt="Our Team" class="img-fluid rounded-circle mb-3" width="350" height="350">
                                     <p>Our diverse team collaborates effectively, celebrating successes and learning from challenges. With a shared vision and unwavering commitment, we continually inspire each other to excel. Together, we form a powerhouse, each member contributing unique strengths to our collective journey. Communication is key, enabling us to work seamlessly and achieve exceptional results. Our unity and adaptability drive our growth, setting new benchmarks as we evolve and reach greater heights.</p>
+
                                 </div>
                             </div>
                         </div>
-    
-                       
+
+
                         <div class="card">
                             <div class="card-header" id="missionHeading">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#missionCollapse" aria-expanded="false" aria-controls="missionCollapse">
-                                     Our Mission
+                                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                                        data-target="#missionCollapse" aria-expanded="false"
+                                        aria-controls="missionCollapse">
+                                        Our Mission
                                     </button>
                                 </h2>
                             </div>
-    
-                            <div id="missionCollapse" class="collapse" aria-labelledby="missionHeading" data-parent="#aboutUsAccordion">
+
+                            <div id="missionCollapse" class="collapse" aria-labelledby="missionHeading"
+                                data-parent="#aboutUsAccordion">
                                 <div class="card-body">
+
                                     
                                     <p>Our team is a dynamic group driven by a common mission. Comprised of talented individuals with diverse backgrounds and skills, we unite our strengths to reach our goals. We foster a culture of collaboration, creativity, and innovation, valuing each team member's unique contribution. With a track record of successful projects, we're dedicated to continuously pushing boundaries and achieving excellence in our endeavors.</p>
+
                                 </div>
                             </div>
                         </div>
@@ -515,10 +615,31 @@
             </div>
         </div>
     </div>
-    
-    
+
+
     <footer class="text-center p-4">
         <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6 ">
+                    <h2 class="text-center mb-5">Contact Us</h2>
+                    <ul class="contact-us-list text-left">
+                        <li>
+                            <p>If you have any questions or inquiries, feel free to get in touch with us.</p>
+                        </li>
+                        <li>
+                            <p>Email: <a href="mailto:insignia@gmail" class="footer-contact-mail">Insignia@gmail.com</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p>Phone: +91 ......</p>
+                        </li>
+                        <li>
+                            <p>Address: University Road, Ladhewali, Jalandhar, Punjab 144007</p>
+                        </li>
+                    </ul>
+                </div>
+               
           <div class="row">
             <div class="col-lg-6 ">
               <h2 class="text-center mb-5">Contact Us</h2>
@@ -535,18 +656,19 @@
                 <div class="embed-responsive embed-responsive-16by9">
                     <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3424.0488331619344!2d75.5989846!3d31.3293395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a598afff01ab1%3A0x4d676314655e801!2sGuru%20Nanak%20Dev%20University%2C%20Regional%20Campus%2C%20Jalandhar!5e0!3m2!1sen!2sin!4v1660980749993!5m2!1sen!2sin" allowfullscreen></iframe>
                 </div>
-                
+
             </div>
-            
-        </div>
             <hr>
             <p class="text-center footer-copy">&copy;insignia2023, made with 💙 by ... </p>
-      </footer>
-    
-    
+
+    </footer>
+
+
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
+
 </html>

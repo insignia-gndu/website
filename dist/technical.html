@@ -37,6 +37,20 @@
             font-size: 17px;
         }
 
+        .custom-toggler-icon {
+            width: 30px;
+            height: 3px;
+            background: linear-gradient(90deg,rgb(49, 101, 139) 0% , plum 100%);
+            margin: 4px 0;
+            display: block;
+                
+        }
+
+        .navbar-toggler {
+            float: left;
+            margin-left: 0%;
+        }
+
         body {
             font-family: 'Montserrat', sans-serif;
             margin: 0;
@@ -57,10 +71,10 @@
         }
 
         svg {
-    display: inline;
-    height: 2rem !important;
-    width: 2rem !important;
-}
+            display: inline;
+            height: 2rem !important;
+            width: 2rem !important;
+        }
 
         /* for navbar */
         .container {
@@ -323,27 +337,34 @@
             background-color: gainsboro;
         }
 
-       
-        
-        .navbar {
-  background-color: hsla(203, 100%, 99%, 1);
-  background-image: radial-gradient(
-      at 97% 11%,
-      hsla(162, 100%, 80%, 1) 0px,
-      transparent 50%
-    ),
-    radial-gradient(at 65% 0%, hsla(189, 100%, 56%, 1) 0px, transparent 50%),
-    radial-gradient(at 2% 2%, hsla(306, 100%, 92%, 1) 0px, transparent 50%),
-    radial-gradient(at 38% 8%, hsla(242, 100%, 70%, 1) 0px, transparent 50%);
 
-  animation: gradient 13s ease infinite;
-  background-size: 200% 200%;
-}
 
-.navbar-expand-lg {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
+        /* .navbar {
+            background-color: hsla(203, 100%, 99%, 1);
+            background-image: radial-gradient(at 97% 11%,
+                    hsla(162, 100%, 80%, 1) 0px,
+                    transparent 50%),
+                radial-gradient(at 65% 0%, hsla(189, 100%, 56%, 1) 0px, transparent 50%),
+                radial-gradient(at 2% 2%, hsla(306, 100%, 92%, 1) 0px, transparent 50%),
+                radial-gradient(at 38% 8%, hsla(242, 100%, 70%, 1) 0px, transparent 50%);
+
+            animation: gradient 13s ease infinite;
+            background-size: 200% 200%;
+        } */
+
+        /* .navbar-expand-lg {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        } */
+
+        .content {
+            text-align: left;
+        }
+
+        /* .nav-link {
+            font-size: 
+        } */
+
     </style>
 </head>
 
@@ -355,10 +376,18 @@
                 <div class="container">
                     <div class="navbar-collapse">
                         <a class="navbar-brand mx-auto" href="#">
-                            <img src="../assets/images/Insignia-logo-bigArtboard 6.png" alt="Insignia Logo">
+
+                            <img src="assets/images/Insignia-logo-bigArtboard 6.png" alt="Insignia Logo">
                         </a>
-                        
-                          
+                        <!--toggle-->
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="custom-toggler-icon"></span>
+                        <span class="custom-toggler-icon"></span>
+                        <span class="custom-toggler-icon"></span>
+                    </button>
+                          <div class="collapse navbar-collapse" id="navbarNav"> 
+
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
                                 <a class="nav-link" href="#">
@@ -428,16 +457,17 @@
     <hr class="w-1/5 mx-auto">
 
     <br>
+    <br>
 
 
     <div id="quiz" class="grid grid-cols-1 lg:grid-cols-3 justify-items-center h-full">
 
         <div
-            class="py-10 ease-in-out col-span-1 mx-4 hover:drop-shadow-2xl cursor-pointer hover:shadow-slate-950 duration-1000">
-            <div class="rounded overflow-hidden shadow-lg max-w-sm ">
+            class="py-10 ease-in-out col-span-1 mx-4 hover:drop-shadow-xl cursor-pointer hover:shadow-slate-950 duration-1000">
+            <div class="rounded overflow-hidden shadow-md max-w-sm ">
                 <img src="events-icon/quiz.jpg" alt="" class="w-80">
                 <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2">Quiz-O-Pedia</div>
+                    <div class="font-bold text-xl mb-2">Tech-O-Pedia</div>
                 </div>
             </div>
         </div>
@@ -446,17 +476,15 @@
 
         <div class="py-10 ease-in-out col-span-2 mx-4">
 
-            <div class="rounded overflow-hidden shadow-lg max-w-4xl h-full">
-                <nav class="navbar navbar-expand-lg">
+            <div class="rounded overflow-hidden shadow-md max-w-4xl h-full bg-orange-100">
+                <nav class="navbar navbar-expand-lg bg-orange-300">
                     <div id="navbarNavAltMarkup" class="navbar-collapse justify-content-center">
                         <div class="navbar-nav">
                             <a class="nav-link active margin" href="#"
                                 onclick="showContent('about'); return false;">ABOUT</a>
-                            <a class="nav-link active" href="#"
-                                onclick="showContent('structure'); return false;">STRUCTURE</a>
+                            <a class="nav-link active" href="#" onclick="showContent('rules'); return false;">RULES</a>
                             <a class="nav-link active" href="#"
                                 onclick="showContent('timeline'); return false;">TIMELINE</a>
-                            <a class="nav-link active" href="#" onclick="showContent('rules'); return false;">RULES</a>
                             <a class="nav-link active" href="#"
                                 onclick="showContent('contact'); return false;">CONTACT</a>
                         </div>
@@ -465,27 +493,19 @@
 
                 <div id="about" class="content active-content">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, rem
-                            at
-                            ea, tempora accusantium veniam, rerum tempore delectus blanditiis inventore temporibus eum.
-                            At
-                            error sequi, deleniti, eum quam optio illo repellat ducimus dolore minus libero delectus
-                            odit
-                            blanditiis animi provident quasi ad quo est? Dolorem, dignissimos! Iusto, commodi enim.
-                            Dolor
-                            aut corporis consequuntur expedita cupiditate dicta error soluta excepturi fuga hic, nulla
-                            voluptate minus ratione aliquid tempora eum at quas eveniet molestias porro suscipit beatae
-                            sit.
-                            Sapiente illum adipisci reprehenderit et dolor rerum eveniet est saepe at veritatis quia
-                            quaerat
-                            eum rem possimus similique ducimus voluptatibus quas, incidunt commodi ut.
+                        <p class="text-button">A Tech-O-Pedia typically consists of a series of questions designed to
+                            test an individual's knowledge and expertise in a specific technical field, such as computer
+                            programming, engineering, or science. Participants are required to answer these questions,
+                            often multiple-choice or short-answer, to demonstrate their proficiency and understanding of
+                            technical concepts. It’s from Beginners to Intermediate Level.
+
                         </p>
                     </div>
                 </div>
 
                 <div id="structure" class="content">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+                        <p class="text-button">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
                             tempore, laudantium molestias voluptas quod, rerum animi autem cum temporibus repellendus
                             aperiam numquam asperiores fugiat quo ut ad laborum reprehenderit quasi. Sit dignissimos
                             quasi deleniti atque qui est dolore delectus totam odit perferendis, accusantium vero illum
@@ -498,7 +518,7 @@
 
                 <div id="timeline" class="content">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+                        <p class="text-button">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
                             velit quo eum pariatur debitis quisquam ducimus facilis repudiandae alias at? Tempora
                             obcaecati alias molestiae voluptas magnam nulla molestias earum quia reiciendis. Adipisci
                             incidunt porro excepturi voluptatum vero sequi, eaque maxime nobis ducimus officiis, cumque
@@ -509,7 +529,7 @@
 
                 <div id="rules" class="content">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos dolor at
+                        <p class="text-button">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos dolor at
                             quisquam, nostrum quasi tempora quae accusamus necessitatibus. Dolorem sit consectetur in,
                             officiis reprehenderit sed. Explicabo distinctio, consequatur fugiat consequuntur et quidem
                             molestiae, esse quo enim corporis aut odit maiores quaerat praesentium? Aut iusto nisi,
@@ -521,7 +541,7 @@
 
                 <div id="contact" class="content">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ex
+                        <p class="text-button">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ex
                             eveniet fugiat quia eum numquam aliquid modi aspernatur veritatis illo.
                         </p>
                     </div>
@@ -552,7 +572,7 @@
 
         <div
             class="py-10 ease-in-out col-span-1 mx-4 hover:drop-shadow-xl cursor-pointer hover:shadow-slate-950 duration-1000">
-            <div class="rounded overflow-hidden shadow-lg max-w-sm">
+            <div class="rounded overflow-hidden shadow-md max-w-sm">
                 <img src="events-icon/debate.jpg" alt="" class="w-80">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Tech-Deb
@@ -565,18 +585,16 @@
 
         <div class="py-10 ease-in-out col-span-2 mx-4">
 
-            <div class="rounded overflow-hidden shadow-lg max-w-4xl h-full">
-                <nav class="navbar navbar-expand-lg">
+            <div class="rounded overflow-hidden shadow-md max-w-4xl h-full bg-green-100">
+                <nav class="navbar navbar-expand-lg bg-green-300">
                     <div id="navbarNavAltMarkup" class="navbar-collapse justify-content-center">
                         <div class="navbar-nav">
                             <a class="nav-link active" href="#"
                                 onclick="showContent2('about2'); return false;">ABOUT</a>
                             <a class="nav-link active" href="#"
-                                onclick="showContent2('structure2'); return false;">STRUCTURE</a>
+                                onclick="showContent2('rules2'); return false;">RULES</a>
                             <a class="nav-link active" href="#"
                                 onclick="showContent2('timeline2'); return false;">TIMELINE</a>
-                            <a class="nav-link active" href="#"
-                                onclick="showContent2('rules2'); return false;">RULES</a>
                             <a class="nav-link active" href="#"
                                 onclick="showContent2('contact2'); return false;">CONTACT</a>
                         </div>
@@ -585,27 +603,15 @@
 
                 <div id="about2" class="content2 active-content">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, rem
-                            at
-                            ea, tempora accusantium veniam, rerum tempore delectus blanditiis inventore temporibus eum.
-                            At
-                            error sequi, deleniti, eum quam optio illo repellat ducimus dolore minus libero delectus
-                            odit
-                            blanditiis animi provident quasi ad quo est? Dolorem, dignissimos! Iusto, commodi enim.
-                            Dolor
-                            aut corporis consequuntur expedita cupiditate dicta error soluta excepturi fuga hic, nulla
-                            voluptate minus ratione aliquid tempora eum at quas eveniet molestias porro suscipit beatae
-                            sit.
-                            Sapiente illum adipisci reprehenderit et dolor rerum eveniet est saepe at veritatis quia
-                            quaerat
-                            eum rem possimus similique ducimus voluptatibus quas, incidunt commodi ut.
+                        <p class="text-button">
+                            A Tech-Deb involves a structured discussion where participants present and argue different viewpoints on a specific technical topic. It aims to explore the pros and cons, encourage critical thinking, and arrive at a well-informed conclusion based on evidence and logical reasoning. The format typically includes opening statements, rebuttals, and a conclusion.
                         </p>
                     </div>
                 </div>
 
                 <div id="structure2" class="content2">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+                        <p class="text-button">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
                             tempore, laudantium molestias voluptas quod, rerum animi autem cum temporibus repellendus
                             aperiam numquam asperiores fugiat quo ut ad laborum reprehenderit quasi. Sit dignissimos
                             quasi deleniti atque qui est dolore delectus totam odit perferendis, accusantium vero illum
@@ -618,7 +624,7 @@
 
                 <div id="timeline2" class="content2">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+                        <p class="text-button">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
                             velit quo eum pariatur debitis quisquam ducimus facilis repudiandae alias at? Tempora
                             obcaecati alias molestiae voluptas magnam nulla molestias earum quia reiciendis. Adipisci
                             incidunt porro excepturi voluptatum vero sequi, eaque maxime nobis ducimus officiis, cumque
@@ -629,7 +635,7 @@
 
                 <div id="rules2" class="content2">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos dolor at
+                        <p class="text-button">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos dolor at
                             quisquam, nostrum quasi tempora quae accusamus necessitatibus. Dolorem sit consectetur in,
                             officiis reprehenderit sed. Explicabo distinctio, consequatur fugiat consequuntur et quidem
                             molestiae, esse quo enim corporis aut odit maiores quaerat praesentium? Aut iusto nisi,
@@ -641,7 +647,7 @@
 
                 <div id="contact2" class="content2">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ex
+                        <p class="text-button">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ex
                             eveniet fugiat quia eum numquam aliquid modi aspernatur veritatis illo.
                         </p>
                     </div>
@@ -672,7 +678,7 @@
 
         <div
             class="py-10 ease-in-out col-span-1 mx-4 hover:drop-shadow-2xl cursor-pointer hover:shadow-slate-950 duration-1000">
-            <div class="rounded overflow-hidden shadow-lg max-w-sm">
+            <div class="rounded overflow-hidden shadow-md max-w-sm">
                 <img src="events-icon/spin-a-web.jpg" alt="" class="w-80">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Spin a Web
@@ -685,16 +691,14 @@
 
         <div class="py-10 ease-in-out col-span-2 mx-4">
 
-            <div class="rounded overflow-hidden shadow-lg max-w-4xl h-full">
-                <nav class="navbar navbar-expand-lg">
+            <div class="rounded overflow-hidden shadow-md max-w-4xl h-full bg-blue-100">
+                <nav class="navbar navbar-expand-lg bg-blue-300">
                     <div id="navbarNavAltMarkup" class="navbar-collapse justify-content-center">
                         <div class="navbar-nav">
                             <a class="nav-link active" href="#"
                                 onclick="showContent3('about3'); return false;">ABOUT</a>
                             <a class="nav-link active" href="#"
                                 onclick="showContent3('structure3'); return false;">STRUCTURE</a>
-                            <a class="nav-link active" href="#"
-                                onclick="showContent3('timeline3'); return false;">TIMELINE</a>
                             <a class="nav-link active" href="#"
                                 onclick="showContent3('rules3'); return false;">RULES</a>
                             <a class="nav-link active" href="#"
@@ -705,27 +709,15 @@
 
                 <div id="about3" class="content3 active-content">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, rem
-                            at
-                            ea, tempora accusantium veniam, rerum tempore delectus blanditiis inventore temporibus eum.
-                            At
-                            error sequi, deleniti, eum quam optio illo repellat ducimus dolore minus libero delectus
-                            odit
-                            blanditiis animi provident quasi ad quo est? Dolorem, dignissimos! Iusto, commodi enim.
-                            Dolor
-                            aut corporis consequuntur expedita cupiditate dicta error soluta excepturi fuga hic, nulla
-                            voluptate minus ratione aliquid tempora eum at quas eveniet molestias porro suscipit beatae
-                            sit.
-                            Sapiente illum adipisci reprehenderit et dolor rerum eveniet est saepe at veritatis quia
-                            quaerat
-                            eum rem possimus similique ducimus voluptatibus quas, incidunt commodi ut.
+                        <p class="text-button">
+                            A Spin a Web allows students to demonstrate their web design skills and creativity. It provides a platform for learning, networking, and fostering creativity in the field of web designing.
                         </p>
                     </div>
                 </div>
 
                 <div id="structure3" class="content3">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+                        <p class="text-button">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
                             tempore, laudantium molestias voluptas quod, rerum animi autem cum temporibus repellendus
                             aperiam numquam asperiores fugiat quo ut ad laborum reprehenderit quasi. Sit dignissimos
                             quasi deleniti atque qui est dolore delectus totam odit perferendis, accusantium vero illum
@@ -738,7 +730,7 @@
 
                 <div id="timeline3" class="content3">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+                        <p class="text-button">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
                             velit quo eum pariatur debitis quisquam ducimus facilis repudiandae alias at? Tempora
                             obcaecati alias molestiae voluptas magnam nulla molestias earum quia reiciendis. Adipisci
                             incidunt porro excepturi voluptatum vero sequi, eaque maxime nobis ducimus officiis, cumque
@@ -749,7 +741,7 @@
 
                 <div id="rules3" class="content3">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos dolor at
+                        <p class="text-button">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos dolor at
                             quisquam, nostrum quasi tempora quae accusamus necessitatibus. Dolorem sit consectetur in,
                             officiis reprehenderit sed. Explicabo distinctio, consequatur fugiat consequuntur et quidem
                             molestiae, esse quo enim corporis aut odit maiores quaerat praesentium? Aut iusto nisi,
@@ -761,7 +753,7 @@
 
                 <div id="contact3" class="content3">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ex
+                        <p class="text-button">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ex
                             eveniet fugiat quia eum numquam aliquid modi aspernatur veritatis illo.
                         </p>
                     </div>
@@ -790,7 +782,7 @@
 
         <div
             class="py-10 ease-in-out col-span-1 mx-4 hover:drop-shadow-2xl cursor-pointer hover:shadow-slate-950 duration-1000">
-            <div class="rounded overflow-hidden shadow-lg max-w-sm">
+            <div class="rounded overflow-hidden shadow-md max-w-sm">
                 <img src="events-icon/avishkar-anvesha.jpg" alt="" class="w-80">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">AvishkarAnvesha
@@ -803,18 +795,16 @@
 
         <div class="py-10 ease-in-out col-span-2 mx-4">
 
-            <div class="rounded overflow-hidden shadow-lg max-w-4xl h-full">
+            <div class="rounded overflow-hidden shadow-md max-w-4xl h-full">
                 <nav class="navbar navbar-expand-lg">
                     <div id="navbarNavAltMarkup" class="navbar-collapse justify-content-center">
                         <div class="navbar-nav">
                             <a class="nav-link active" href="#"
                                 onclick="showContent4('about4'); return false;">ABOUT</a>
                             <a class="nav-link active" href="#"
-                                onclick="showContent4('structure4'); return false;">STRUCTURE</a>
+                                onclick="showContent4('rules4'); return false;">RULES</a>
                             <a class="nav-link active" href="#"
                                 onclick="showContent4('timeline4'); return false;">TIMELINE</a>
-                            <a class="nav-link active" href="#"
-                                onclick="showContent4('rules4'); return false;">RULES</a>
                             <a class="nav-link active" href="#"
                                 onclick="showContent4('contact4'); return false;">CONTACT</a>
                         </div>
@@ -823,27 +813,15 @@
 
                 <div id="about4" class="content4 active-content">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, rem
-                            at
-                            ea, tempora accusantium veniam, rerum tempore delectus blanditiis inventore temporibus eum.
-                            At
-                            error sequi, deleniti, eum quam optio illo repellat ducimus dolore minus libero delectus
-                            odit
-                            blanditiis animi provident quasi ad quo est? Dolorem, dignissimos! Iusto, commodi enim.
-                            Dolor
-                            aut corporis consequuntur expedita cupiditate dicta error soluta excepturi fuga hic, nulla
-                            voluptate minus ratione aliquid tempora eum at quas eveniet molestias porro suscipit beatae
-                            sit.
-                            Sapiente illum adipisci reprehenderit et dolor rerum eveniet est saepe at veritatis quia
-                            quaerat
-                            eum rem possimus similique ducimus voluptatibus quas, incidunt commodi ut.
+                        <p class="text-button">
+                            An AvishkarAnvesha is a gathering or competition that encourages individuals or teams to present novel ideas, technologies, or solutions. Participants showcase their creativity and problem-solving skills, fostering collaboration and often aiming to address real-world challenges or drive advancements in various fields.
                         </p>
                     </div>
                 </div>
 
                 <div id="structure4" class="content4">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+                        <p class="text-button">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
                             tempore, laudantium molestias voluptas quod, rerum animi autem cum temporibus repellendus
                             aperiam numquam asperiores fugiat quo ut ad laborum reprehenderit quasi. Sit dignissimos
                             quasi deleniti atque qui est dolore delectus totam odit perferendis, accusantium vero illum
@@ -856,7 +834,7 @@
 
                 <div id="timeline4" class="content4">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+                        <p class="text-button">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
                             velit quo eum pariatur debitis quisquam ducimus facilis repudiandae alias at? Tempora
                             obcaecati alias molestiae voluptas magnam nulla molestias earum quia reiciendis. Adipisci
                             incidunt porro excepturi voluptatum vero sequi, eaque maxime nobis ducimus officiis, cumque
@@ -867,7 +845,7 @@
 
                 <div id="rules4" class="content4">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos dolor at
+                        <p class="text-button">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos dolor at
                             quisquam, nostrum quasi tempora quae accusamus necessitatibus. Dolorem sit consectetur in,
                             officiis reprehenderit sed. Explicabo distinctio, consequatur fugiat consequuntur et quidem
                             molestiae, esse quo enim corporis aut odit maiores quaerat praesentium? Aut iusto nisi,
@@ -879,7 +857,7 @@
 
                 <div id="contact4" class="content4">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ex
+                        <p class="text-button">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ex
                             eveniet fugiat quia eum numquam aliquid modi aspernatur veritatis illo.
                         </p>
                     </div>
@@ -907,7 +885,7 @@
 
         <div
             class="py-10 ease-in-out col-span-1 mx-4 hover:drop-shadow-2xl cursor-pointer hover:shadow-slate-950 duration-1000">
-            <div class="rounded overflow-hidden shadow-lg max-w-sm">
+            <div class="rounded overflow-hidden shadow-md max-w-sm">
                 <img src="events-icon/codecode.jpg" alt="" class="w-80">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Codecode
@@ -920,18 +898,16 @@
 
         <div class="py-10 ease-in-out col-span-2 mx-4">
 
-            <div class="rounded overflow-hidden shadow-lg max-w-4xl h-full">
+            <div class="rounded overflow-hidden shadow-md max-w-4xl h-full">
                 <nav class="navbar navbar-expand-lg">
                     <div id="navbarNavAltMarkup" class="navbar-collapse justify-content-center">
                         <div class="navbar-nav">
                             <a class="nav-link active" href="#"
                                 onclick="showContent5('about5'); return false;">ABOUT</a>
                             <a class="nav-link active" href="#"
-                                onclick="showContent5('structure5'); return false;">STRUCTURE</a>
+                                onclick="showContent5('rules5'); return false;">RULES</a>
                             <a class="nav-link active" href="#"
                                 onclick="showContent5('timeline5'); return false;">TIMELINE</a>
-                            <a class="nav-link active" href="#"
-                                onclick="showContent5('rules5'); return false;">RULES</a>
                             <a class="nav-link active" href="#"
                                 onclick="showContent5('contact5'); return false;">CONTACT</a>
                         </div>
@@ -940,27 +916,15 @@
 
                 <div id="about5" class="content5 active-content">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, rem
-                            at
-                            ea, tempora accusantium veniam, rerum tempore delectus blanditiis inventore temporibus eum.
-                            At
-                            error sequi, deleniti, eum quam optio illo repellat ducimus dolore minus libero delectus
-                            odit
-                            blanditiis animi provident quasi ad quo est? Dolorem, dignissimos! Iusto, commodi enim.
-                            Dolor
-                            aut corporis consequuntur expedita cupiditate dicta error soluta excepturi fuga hic, nulla
-                            voluptate minus ratione aliquid tempora eum at quas eveniet molestias porro suscipit beatae
-                            sit.
-                            Sapiente illum adipisci reprehenderit et dolor rerum eveniet est saepe at veritatis quia
-                            quaerat
-                            eum rem possimus similique ducimus voluptatibus quas, incidunt commodi ut.
+                        <p class="text-button">
+                            Teams are required to unravel real-life issues through coding. Participants should tackle the most significant conceivable questions in indicated time interim in the most proficient way. The programming aptitudes of members would be tested in this competition.
                         </p>
                     </div>
                 </div>
 
                 <div id="structure5" class="content5">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+                        <p class="text-button">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
                             tempore, laudantium molestias voluptas quod, rerum animi autem cum temporibus repellendus
                             aperiam numquam asperiores fugiat quo ut ad laborum reprehenderit quasi. Sit dignissimos
                             quasi deleniti atque qui est dolore delectus totam odit perferendis, accusantium vero illum
@@ -973,7 +937,7 @@
 
                 <div id="timeline5" class="content5">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+                        <p class="text-button">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
                             velit quo eum pariatur debitis quisquam ducimus facilis repudiandae alias at? Tempora
                             obcaecati alias molestiae voluptas magnam nulla molestias earum quia reiciendis. Adipisci
                             incidunt porro excepturi voluptatum vero sequi, eaque maxime nobis ducimus officiis, cumque
@@ -984,7 +948,7 @@
 
                 <div id="rules5" class="content5">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos dolor at
+                        <p class="text-button">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos dolor at
                             quisquam, nostrum quasi tempora quae accusamus necessitatibus. Dolorem sit consectetur in,
                             officiis reprehenderit sed. Explicabo distinctio, consequatur fugiat consequuntur et quidem
                             molestiae, esse quo enim corporis aut odit maiores quaerat praesentium? Aut iusto nisi,
@@ -996,7 +960,7 @@
 
                 <div id="contact5" class="content5">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ex
+                        <p class="text-button">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ex
                             eveniet fugiat quia eum numquam aliquid modi aspernatur veritatis illo.
                         </p>
                     </div>
@@ -1024,7 +988,7 @@
 
         <div
             class="py-10 ease-in-out col-span-1 mx-4 hover:drop-shadow-2xl cursor-pointer hover:shadow-slate-950 duration-1000">
-            <div class="rounded overflow-hidden shadow-lg max-w-sm">
+            <div class="rounded overflow-hidden shadow-md max-w-sm">
                 <img src="events-icon/gaming.jpg" alt="" class="w-80">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">LAN/Mobile Gaming
@@ -1037,18 +1001,16 @@
 
         <div class="py-10 ease-in-out col-span-2 mx-4">
 
-            <div class="rounded overflow-hidden shadow-lg max-w-4xl h-full">
+            <div class="rounded overflow-hidden shadow-md max-w-4xl h-full">
                 <nav class="navbar navbar-expand-lg">
                     <div id="navbarNavAltMarkup" class="navbar-collapse justify-content-center">
                         <div class="navbar-nav">
                             <a class="nav-link active" href="#"
                                 onclick="showContent6('about6'); return false;">ABOUT</a>
                             <a class="nav-link active" href="#"
-                                onclick="showContent6('structure6'); return false;">STRUCTURE</a>
+                                onclick="showContent6('rules6'); return false;">RULES</a>
                             <a class="nav-link active" href="#"
                                 onclick="showContent6('timeline6'); return false;">TIMELINE</a>
-                            <a class="nav-link active" href="#"
-                                onclick="showContent6('rules6'); return false;">RULES</a>
                             <a class="nav-link active" href="#"
                                 onclick="showContent6('contact6'); return false;">CONTACT</a>
                         </div>
@@ -1057,27 +1019,15 @@
 
                 <div id="about6" class="content6 active-content">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, rem
-                            at
-                            ea, tempora accusantium veniam, rerum tempore delectus blanditiis inventore temporibus eum.
-                            At
-                            error sequi, deleniti, eum quam optio illo repellat ducimus dolore minus libero delectus
-                            odit
-                            blanditiis animi provident quasi ad quo est? Dolorem, dignissimos! Iusto, commodi enim.
-                            Dolor
-                            aut corporis consequuntur expedita cupiditate dicta error soluta excepturi fuga hic, nulla
-                            voluptate minus ratione aliquid tempora eum at quas eveniet molestias porro suscipit beatae
-                            sit.
-                            Sapiente illum adipisci reprehenderit et dolor rerum eveniet est saepe at veritatis quia
-                            quaerat
-                            eum rem possimus similique ducimus voluptatibus quas, incidunt commodi ut.
+                        <p class="text-button">
+                            Participants connect their devices to a local area network (LAN) or play on mobile platforms, engaging in tournaments, challenges, or friendly matches. These events encourage social interaction, skill development, and a sense of community among gamers.
                         </p>
                     </div>
                 </div>
 
                 <div id="structure6" class="content6">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+                        <p class="text-button">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
                             tempore, laudantium molestias voluptas quod, rerum animi autem cum temporibus repellendus
                             aperiam numquam asperiores fugiat quo ut ad laborum reprehenderit quasi. Sit dignissimos
                             quasi deleniti atque qui est dolore delectus totam odit perferendis, accusantium vero illum
@@ -1090,7 +1040,7 @@
 
                 <div id="timeline6" class="content6">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+                        <p class="text-button">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
                             velit quo eum pariatur debitis quisquam ducimus facilis repudiandae alias at? Tempora
                             obcaecati alias molestiae voluptas magnam nulla molestias earum quia reiciendis. Adipisci
                             incidunt porro excepturi voluptatum vero sequi, eaque maxime nobis ducimus officiis, cumque
@@ -1101,7 +1051,7 @@
 
                 <div id="rules6" class="content6">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos dolor at
+                        <p class="text-button">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos dolor at
                             quisquam, nostrum quasi tempora quae accusamus necessitatibus. Dolorem sit consectetur in,
                             officiis reprehenderit sed. Explicabo distinctio, consequatur fugiat consequuntur et quidem
                             molestiae, esse quo enim corporis aut odit maiores quaerat praesentium? Aut iusto nisi,
@@ -1113,7 +1063,7 @@
 
                 <div id="contact6" class="content6">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ex
+                        <p class="text-button">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ex
                             eveniet fugiat quia eum numquam aliquid modi aspernatur veritatis illo.
                         </p>
                     </div>
@@ -1142,7 +1092,7 @@
 
         <div
             class="py-10 ease-in-out col-span-1 mx-4 hover:drop-shadow-2xl cursor-pointer hover:shadow-slate-950 duration-1000">
-            <div class="rounded overflow-hidden shadow-lg max-w-sm">
+            <div class="rounded overflow-hidden shadow-md max-w-sm">
                 <img src="events-icon/project.jpg" alt="" class="w-80">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Project Display
@@ -1155,18 +1105,16 @@
 
         <div class="py-10 ease-in-out col-span-2 mx-4">
 
-            <div class="rounded overflow-hidden shadow-lg max-w-4xl h-full">
+            <div class="rounded overflow-hidden shadow-md max-w-4xl h-full">
                 <nav class="navbar navbar-expand-lg">
                     <div id="navbarNavAltMarkup" class="navbar-collapse justify-content-center">
                         <div class="navbar-nav">
                             <a class="nav-link active" href="#"
                                 onclick="showContent7('about7'); return false;">ABOUT</a>
                             <a class="nav-link active" href="#"
-                                onclick="showContent7('structure7'); return false;">STRUCTURE</a>
+                                onclick="showContent7('rules7'); return false;">RULES</a>
                             <a class="nav-link active" href="#"
                                 onclick="showContent7('timeline7'); return false;">TIMELINE</a>
-                            <a class="nav-link active" href="#"
-                                onclick="showContent7('rules7'); return false;">RULES</a>
                             <a class="nav-link active" href="#"
                                 onclick="showContent7('contact7'); return false;">CONTACT</a>
                         </div>
@@ -1175,27 +1123,15 @@
 
                 <div id="about7" class="content7 active-content">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, rem
-                            at
-                            ea, tempora accusantium veniam, rerum tempore delectus blanditiis inventore temporibus eum.
-                            At
-                            error sequi, deleniti, eum quam optio illo repellat ducimus dolore minus libero delectus
-                            odit
-                            blanditiis animi provident quasi ad quo est? Dolorem, dignissimos! Iusto, commodi enim.
-                            Dolor
-                            aut corporis consequuntur expedita cupiditate dicta error soluta excepturi fuga hic, nulla
-                            voluptate minus ratione aliquid tempora eum at quas eveniet molestias porro suscipit beatae
-                            sit.
-                            Sapiente illum adipisci reprehenderit et dolor rerum eveniet est saepe at veritatis quia
-                            quaerat
-                            eum rem possimus similique ducimus voluptatibus quas, incidunt commodi ut.
+                        <p class="text-button">
+                            A project display involves showcasing a completed or ongoing project, often within a specific field or industry, to a targeted audience. It typically includes a visually appealing presentation of the project's objectives, methodologies, results, and potential impact. The display aims to effectively communicate the project's essence, innovation, and relevance to garner interest, feedback, and support.
                         </p>
                     </div>
                 </div>
 
                 <div id="structure7" class="content7">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+                        <p class="text-button">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
                             tempore, laudantium molestias voluptas quod, rerum animi autem cum temporibus repellendus
                             aperiam numquam asperiores fugiat quo ut ad laborum reprehenderit quasi. Sit dignissimos
                             quasi deleniti atque qui est dolore delectus totam odit perferendis, accusantium vero illum
@@ -1208,7 +1144,7 @@
 
                 <div id="timeline7" class="content7">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+                        <p class="text-button">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
                             velit quo eum pariatur debitis quisquam ducimus facilis repudiandae alias at? Tempora
                             obcaecati alias molestiae voluptas magnam nulla molestias earum quia reiciendis. Adipisci
                             incidunt porro excepturi voluptatum vero sequi, eaque maxime nobis ducimus officiis, cumque
@@ -1219,7 +1155,7 @@
 
                 <div id="rules7" class="content7">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos dolor at
+                        <p class="text-button">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos dolor at
                             quisquam, nostrum quasi tempora quae accusamus necessitatibus. Dolorem sit consectetur in,
                             officiis reprehenderit sed. Explicabo distinctio, consequatur fugiat consequuntur et quidem
                             molestiae, esse quo enim corporis aut odit maiores quaerat praesentium? Aut iusto nisi,
@@ -1231,7 +1167,7 @@
 
                 <div id="contact7" class="content7">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ex
+                        <p class="text-button">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ex
                             eveniet fugiat quia eum numquam aliquid modi aspernatur veritatis illo.
                         </p>
                     </div>
@@ -1261,7 +1197,7 @@
 
         <div
             class="py-10 ease-in-out col-span-1 mx-4 hover:drop-shadow-2xl cursor-pointer hover:shadow-slate-950 duration-1000">
-            <div class="rounded overflow-hidden shadow-lg max-w-sm">
+            <div class="rounded overflow-hidden shadow-md max-w-sm">
                 <img src="images/fun-activities.jpg" alt="" class="w-80">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Electro-Hunt
@@ -1274,18 +1210,16 @@
 
         <div class="py-10 ease-in-out col-span-2 mx-4">
 
-            <div class="rounded overflow-hidden shadow-lg max-w-4xl h-full">
+            <div class="rounded overflow-hidden shadow-md max-w-4xl h-full">
                 <nav class="navbar navbar-expand-lg">
                     <div id="navbarNavAltMarkup" class="navbar-collapse justify-content-center">
                         <div class="navbar-nav">
                             <a class="nav-link active" href="#"
                                 onclick="showContent8('about8'); return false;">ABOUT</a>
                             <a class="nav-link active" href="#"
-                                onclick="showContent8('structure8'); return false;">STRUCTURE</a>
+                                onclick="showContent8('rules8'); return false;">RULES</a>
                             <a class="nav-link active" href="#"
                                 onclick="showContent8('timeline8'); return false;">TIMELINE</a>
-                            <a class="nav-link active" href="#"
-                                onclick="showContent8('rules8'); return false;">RULES</a>
                             <a class="nav-link active" href="#"
                                 onclick="showContent8('contact8'); return false;">CONTACT</a>
                         </div>
@@ -1294,27 +1228,14 @@
 
                 <div id="about8" class="content8 active-content">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, rem
-                            at
-                            ea, tempora accusantium veniam, rerum tempore delectus blanditiis inventore temporibus eum.
-                            At
-                            error sequi, deleniti, eum quam optio illo repellat ducimus dolore minus libero delectus
-                            odit
-                            blanditiis animi provident quasi ad quo est? Dolorem, dignissimos! Iusto, commodi enim.
-                            Dolor
-                            aut corporis consequuntur expedita cupiditate dicta error soluta excepturi fuga hic, nulla
-                            voluptate minus ratione aliquid tempora eum at quas eveniet molestias porro suscipit beatae
-                            sit.
-                            Sapiente illum adipisci reprehenderit et dolor rerum eveniet est saepe at veritatis quia
-                            quaerat
-                            eum rem possimus similique ducimus voluptatibus quas, incidunt commodi ut.
+                        <p class="text-button">
                         </p>
                     </div>
                 </div>
 
                 <div id="structure8" class="content8">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+                        <p class="text-button">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
                             tempore, laudantium molestias voluptas quod, rerum animi autem cum temporibus repellendus
                             aperiam numquam asperiores fugiat quo ut ad laborum reprehenderit quasi. Sit dignissimos
                             quasi deleniti atque qui est dolore delectus totam odit perferendis, accusantium vero illum
@@ -1327,7 +1248,7 @@
 
                 <div id="timeline8" class="content8">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+                        <p class="text-button">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
                             velit quo eum pariatur debitis quisquam ducimus facilis repudiandae alias at? Tempora
                             obcaecati alias molestiae voluptas magnam nulla molestias earum quia reiciendis. Adipisci
                             incidunt porro excepturi voluptatum vero sequi, eaque maxime nobis ducimus officiis, cumque
@@ -1338,7 +1259,7 @@
 
                 <div id="rules8" class="content8">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos dolor at
+                        <p class="text-button">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos dolor at
                             quisquam, nostrum quasi tempora quae accusamus necessitatibus. Dolorem sit consectetur in,
                             officiis reprehenderit sed. Explicabo distinctio, consequatur fugiat consequuntur et quidem
                             molestiae, esse quo enim corporis aut odit maiores quaerat praesentium? Aut iusto nisi,
@@ -1350,7 +1271,7 @@
 
                 <div id="contact8" class="content8">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ex
+                        <p class="text-button">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ex
                             eveniet fugiat quia eum numquam aliquid modi aspernatur veritatis illo.
                         </p>
                     </div>
@@ -1377,7 +1298,7 @@
 
         <div
             class="py-10 ease-in-out col-span-1 mx-4 hover:drop-shadow-2xl cursor-pointer hover:shadow-slate-950 duration-1000">
-            <div class="rounded overflow-hidden shadow-lg max-w-sm">
+            <div class="rounded overflow-hidden shadow-md max-w-sm">
                 <img src="images/fun-activities.jpg" alt="" class="w-80">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Ad-Vaganza
@@ -1390,18 +1311,16 @@
 
         <div class="py-10 ease-in-out col-span-2 mx-4">
 
-            <div class="rounded overflow-hidden shadow-lg max-w-4xl">
+            <div class="rounded overflow-hidden shadow-md max-w-4xl">
                 <nav class="navbar navbar-expand-lg">
                     <div id="navbarNavAltMarkup" class="navbar-collapse justify-content-center">
                         <div class="navbar-nav">
                             <a class="nav-link active" href="#"
                                 onclick="showContent9('about9'); return false;">ABOUT</a>
                             <a class="nav-link active" href="#"
-                                onclick="showContent9('structure9'); return false;">STRUCTURE</a>
+                                onclick="showContent9('rules9'); return false;">RULES</a>
                             <a class="nav-link active" href="#"
                                 onclick="showContent9('timeline9'); return false;">TIMELINE</a>
-                            <a class="nav-link active" href="#"
-                                onclick="showContent9('rules9'); return false;">RULES</a>
                             <a class="nav-link active" href="#"
                                 onclick="showContent9('contact9'); return false;">CONTACT</a>
                         </div>
@@ -1410,27 +1329,15 @@
 
                 <div id="about9" class="content9 active-content">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, rem
-                            at
-                            ea, tempora accusantium veniam, rerum tempore delectus blanditiis inventore temporibus eum.
-                            At
-                            error sequi, deleniti, eum quam optio illo repellat ducimus dolore minus libero delectus
-                            odit
-                            blanditiis animi provident quasi ad quo est? Dolorem, dignissimos! Iusto, commodi enim.
-                            Dolor
-                            aut corporis consequuntur expedita cupiditate dicta error soluta excepturi fuga hic, nulla
-                            voluptate minus ratione aliquid tempora eum at quas eveniet molestias porro suscipit beatae
-                            sit.
-                            Sapiente illum adipisci reprehenderit et dolor rerum eveniet est saepe at veritatis quia
-                            quaerat
-                            eum rem possimus similique ducimus voluptatibus quas, incidunt commodi ut.
+                        <p class="text-button">
+                            A Ad-vaganza is a platform where individuals present and showcase their technological products, services, or innovations. Participants utilize various advertising strategies to effectively promote their offerings to a targeted audience, often incorporating creativity, visuals, and compelling narratives to capture attention and generate interest.
                         </p>
                     </div>
                 </div>
 
                 <div id="structure9" class="content9">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+                        <p class="text-button">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
                             tempore, laudantium molestias voluptas quod, rerum animi autem cum temporibus repellendus
                             aperiam numquam asperiores fugiat quo ut ad laborum reprehenderit quasi. Sit dignissimos
                             quasi deleniti atque qui est dolore delectus totam odit perferendis, accusantium vero illum
@@ -1443,7 +1350,7 @@
 
                 <div id="timeline9" class="content9">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+                        <p class="text-button">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
                             velit quo eum pariatur debitis quisquam ducimus facilis repudiandae alias at? Tempora
                             obcaecati alias molestiae voluptas magnam nulla molestias earum quia reiciendis. Adipisci
                             incidunt porro excepturi voluptatum vero sequi, eaque maxime nobis ducimus officiis, cumque
@@ -1454,7 +1361,7 @@
 
                 <div id="rules9" class="content9">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos dolor at
+                        <p class="text-button">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos dolor at
                             quisquam, nostrum quasi tempora quae accusamus necessitatibus. Dolorem sit consectetur in,
                             officiis reprehenderit sed. Explicabo distinctio, consequatur fugiat consequuntur et quidem
                             molestiae, esse quo enim corporis aut odit maiores quaerat praesentium? Aut iusto nisi,
@@ -1466,7 +1373,7 @@
 
                 <div id="contact9" class="content9">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ex
+                        <p class="text-button">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ex
                             eveniet fugiat quia eum numquam aliquid modi aspernatur veritatis illo.
                         </p>
                     </div>
@@ -1486,7 +1393,7 @@
 
         <div
             class="py-10 ease-in-out col-span-1 mx-4 hover:drop-shadow-2xl cursor-pointer hover:shadow-slate-950 duration-1000">
-            <div class="rounded overflow-hidden shadow-lg max-w-sm">
+            <div class="rounded overflow-hidden shadow-md max-w-sm">
                 <img src="events-icon/shark-tank.jpg" alt="" class="w-80">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Shark Tank
@@ -1499,18 +1406,16 @@
 
         <div class="py-10 ease-in-out col-span-2 mx-4">
 
-            <div class="rounded overflow-hidden shadow-lg max-w-4xl h-full">
+            <div class="rounded overflow-hidden shadow-md max-w-4xl h-full">
                 <nav class="navbar navbar-expand-lg">
                     <div id="navbarNavAltMarkup" class="navbar-collapse justify-content-center">
                         <div class="navbar-nav">
                             <a class="nav-link active" href="#"
                                 onclick="showContent10('about10'); return false;">ABOUT</a>
                             <a class="nav-link active" href="#"
-                                onclick="showContent10('structure10'); return false;">STRUCTURE</a>
+                                onclick="showContent10('rules10'); return false;">RULES</a>
                             <a class="nav-link active" href="#"
                                 onclick="showContent10('timeline10'); return false;">TIMELINE</a>
-                            <a class="nav-link active" href="#"
-                                onclick="showContent10('rules10'); return false;">RULES</a>
                             <a class="nav-link active" href="#"
                                 onclick="showContent10('contact10'); return false;">CONTACT</a>
                         </div>
@@ -1519,27 +1424,15 @@
 
                 <div id="about10" class="content10 active-content">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, rem
-                            at
-                            ea, tempora accusantium veniam, rerum tempore delectus blanditiis inventore temporibus eum.
-                            At
-                            error sequi, deleniti, eum quam optio illo repellat ducimus dolore minus libero delectus
-                            odit
-                            blanditiis animi provident quasi ad quo est? Dolorem, dignissimos! Iusto, commodi enim.
-                            Dolor
-                            aut corporis consequuntur expedita cupiditate dicta error soluta excepturi fuga hic, nulla
-                            voluptate minus ratione aliquid tempora eum at quas eveniet molestias porro suscipit beatae
-                            sit.
-                            Sapiente illum adipisci reprehenderit et dolor rerum eveniet est saepe at veritatis quia
-                            quaerat
-                            eum rem possimus similique ducimus voluptatibus quas, incidunt commodi ut.
+                        <p class="text-button">
+                            Students present their innovative business ideas or projects to a panel of judges (often faculty, alumni, or industry professionals) in the hope of securing investment or support for their ventures. It provides a platform for entrepreneurial growth, feedback, and networking within an educational setting.
                         </p>
                     </div>
                 </div>
 
                 <div id="structure10" class="content10">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+                        <p class="text-button">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
                             tempore, laudantium molestias voluptas quod, rerum animi autem cum temporibus repellendus
                             aperiam numquam asperiores fugiat quo ut ad laborum reprehenderit quasi. Sit dignissimos
                             quasi deleniti atque qui est dolore delectus totam odit perferendis, accusantium vero illum
@@ -1552,7 +1445,7 @@
 
                 <div id="timeline10" class="content10">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+                        <p class="text-button">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
                             velit quo eum pariatur debitis quisquam ducimus facilis repudiandae alias at? Tempora
                             obcaecati alias molestiae voluptas magnam nulla molestias earum quia reiciendis. Adipisci
                             incidunt porro excepturi voluptatum vero sequi, eaque maxime nobis ducimus officiis, cumque
@@ -1563,7 +1456,7 @@
 
                 <div id="rules10" class="content10">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos dolor at
+                        <p class="text-button">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos dolor at
                             quisquam, nostrum quasi tempora quae accusamus necessitatibus. Dolorem sit consectetur in,
                             officiis reprehenderit sed. Explicabo distinctio, consequatur fugiat consequuntur et quidem
                             molestiae, esse quo enim corporis aut odit maiores quaerat praesentium? Aut iusto nisi,
@@ -1575,7 +1468,7 @@
 
                 <div id="contact10" class="content10">
                     <div class="px-6 py-4">
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ex
+                        <p class="text-button">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ex
                             eveniet fugiat quia eum numquam aliquid modi aspernatur veritatis illo.
                         </p>
                     </div>
@@ -1698,9 +1591,12 @@
             document.getElementById(contentId).style.display = 'block';
         }
     </script>
- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 
 </body>
 

@@ -2,3 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
+.text-color {
+    @apply text-gray-950
+}
