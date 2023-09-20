@@ -76,6 +76,16 @@
   }
 }
 
+@media (max-width: 425px) {
+  .trophy-img {
+    max-width: 35px !important;
+  }
+
+  .navbar-toggler {
+    left: 0.5rem !important;
+  }
+}
+
 @media (max-width: 320px) {
   html {
     font-size: 70%;
