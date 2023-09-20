@@ -15,7 +15,22 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-         a {
+       .custom-toggler-icon {
+            width: 30px;
+            height: 3px;
+            background: linear-gradient(90deg,rgb(49, 101, 139) 0% , plum 100%);
+            margin: 4px 0;
+            display: block;
+                
+        }
+        .navbar-toggler{
+      float: left;
+      margin-left:0%;
+        }
+
+        
+
+        a{
             margin-inline: 14px;
             color: black;
             font-family: Arial, Helvetica, sans-serif;
@@ -37,7 +52,7 @@
       }
 
         .navbar-brand img {
-            max-height: 60px;
+            max-height: 3.75rem;
         }
       /* for navbar */
        .container {
@@ -234,6 +249,14 @@
                     <a class="navbar-brand mx-auto" href="#">
                         <img src="assets/images/Insignia-logo-bigArtboard 6.png" alt="Insignia Logo">
                     </a>
+                    <!--toggle-->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="custom-toggler-icon"></span>
+                    <span class="custom-toggler-icon"></span>
+                    <span class="custom-toggler-icon"></span>
+                </button>
+                      <div class="collapse navbar-collapse" id="navbarNav"> 
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="#">
@@ -287,7 +310,7 @@
                                   <span class="nav-item-text">Contact Us </span></a>
                         </li>
                     </ul>
-                   
+                   </div>
                     <!-- <ul class="navbar-nav ml-auto">
   
                     </ul> -->
@@ -348,7 +371,7 @@
     </div>
 <br>
 <div id="title-sponsors" class="container mt-5">
-    <h1 class="text-center mb-4"> <span class="Title-Times">Sponsor</span></h1>
+    <h1 class="text-center mb-4"> <span class="Title-Times">Title Sponsor</span></h1>
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="sponsor-card">
@@ -372,7 +395,7 @@
                 <img src="assets/images/technical-event.jpg" class="card-img-top" alt="Technical Events">
                 <div class="card-body">
                     <h2 class="card-title">Technical Events</h2>
-                    <p class="card-text">Prepare yourself for thrilling technological challenges that will put your knowledge to the test. Experience an unforgettable event with us!</p>
+                    <p class="card-text">Prepare yourself for thrilling technological challenges that will put your knowledge to the test. Experience an unforgettable event!</p>
                     <div class="square-box">
                         <a href="#registration-technical" class="btn btn-small">Explore</a>
                         <a href="#registration-technical" class="btn btn-small">Register</a>
@@ -421,7 +444,7 @@
                 <img src="assets/images/trophy.gif" alt="Trophy" class="img-fluid trophy-img">
             </div>
     
-            <h1 class="mt-0">Unleash Your Talent!</h1>
+            <h1 class="mt-0">Reveal Talent!</h1>
             <h5>Do you have a hidden talent waiting to be discovered?</h5>
     
            
@@ -465,7 +488,7 @@
                             <div id="teamCollapse" class="collapse show" aria-labelledby="teamHeading" data-parent="#aboutUsAccordion">
                                 <div class="card-body">
                                     <img src="assets/images/fashion.jpg" alt="Our Team" class="img-fluid rounded-circle mb-3" width="350" height="350">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fringilla tincidunt risus, ac blandit elit tempor vel. Nullam bibendum ex in mauris laoreet, sit amet pulvinar sapien sollicitudin.</p>
+                                    <p>Our diverse team collaborates effectively, celebrating successes and learning from challenges. With a shared vision and unwavering commitment, we continually inspire each other to excel. Together, we form a powerhouse, each member contributing unique strengths to our collective journey. Communication is key, enabling us to work seamlessly and achieve exceptional results. Our unity and adaptability drive our growth, setting new benchmarks as we evolve and reach greater heights.</p>
                                 </div>
                             </div>
                         </div>
@@ -483,7 +506,7 @@
                             <div id="missionCollapse" class="collapse" aria-labelledby="missionHeading" data-parent="#aboutUsAccordion">
                                 <div class="card-body">
                                     
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fringilla tincidunt risus, ac blandit elit tempor vel. Nullam bibendum ex in mauris laoreet, sit amet pulvinar sapien sollicitudin.</p>
+                                    <p>Our team is a dynamic group driven by a common mission. Comprised of talented individuals with diverse backgrounds and skills, we unite our strengths to reach our goals. We foster a culture of collaboration, creativity, and innovation, valuing each team member's unique contribution. With a track record of successful projects, we're dedicated to continuously pushing boundaries and achieving excellence in our endeavors.</p>
                                 </div>
                             </div>
                         </div>
@@ -501,17 +524,18 @@
               <h2 class="text-center mb-5">Contact Us</h2>
               <ul class="contact-us-list text-left">
                 <li><p>If you have any questions or inquiries, feel free to get in touch with us.</p></li>
-                <li><p>Email: <a href="mailto:insignia@gmail" class="footer-contact-mail" >Insignia@gmail.com</a></p></li>
-                <li><p>Phone: +91 ......</p></li>
-                <li><p>Address:  University Road, Ladhewali, Jalandhar, Punjab 144007</p></li>
+                <li><p>Email: <a href="mailto:dishaasharma1917@gmail" class="footer-contact-mail" >dishaasharma1917@gmail.com</a></p></li>
+                <li><p>Contact:<br> Disha sharma:+91 9877405594<br> Akshay Sharma: +91 9056398853</p></li>
+                <li><p>Address:Guru Nanak Dev University Road, Ladhewali, Jalandhar, Punjab 144007</p></li>
             </ul>
             </div>
             <div class="col-lg-6">
                 <h2 class="mb-5">Visit Us</h2>
                 <!-- <p class="text-left">Find us on the map:</p> -->
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe src="https://www.google.com/maps/place/Guru+Nanak+Dev+University,+Regional+Campus,+Jalandhar/@31.3335926,75.62112,17z/data=!3m1!4b1!4m6!3m5!1s0x391a598afff01ab1:0x4d676314655e801!8m2!3d31.333588!4d75.6236949!16s%2Fg%2F1vfwb6v8?entry=ttu" allowfullscreen></iframe>
+                    <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3424.0488331619344!2d75.5989846!3d31.3293395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a598afff01ab1%3A0x4d676314655e801!2sGuru%20Nanak%20Dev%20University%2C%20Regional%20Campus%2C%20Jalandhar!5e0!3m2!1sen!2sin!4v1660980749993!5m2!1sen!2sin" allowfullscreen></iframe>
                 </div>
+                
             </div>
             
         </div>
@@ -520,10 +544,6 @@
       </footer>
     
     
-    
-    
-    
-   
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
