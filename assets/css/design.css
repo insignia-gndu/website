@@ -483,10 +483,3 @@ footer hr {
   color: #92f8ff;
   font-size: inherit;
 }
-
-.navbar-toggler{
-position: absolute;
-left: 0.75rem;
-top: 50%;
-transform: TranslateY(-50%) ;
-}
