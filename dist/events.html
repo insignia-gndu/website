@@ -55,32 +55,6 @@
              padding: 10px;
         }
 
-        .event-description {
-            color: #fff;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-            max-width: 80%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 24px;
-            transform: translate(-50%, -50%);
-            z-index: 1;
-            padding: 15px;
-            background-color: rgba(0, 0, 0, 0.7); 
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            min-height: fit-content;
-        }
-
-        .image-slider {
-            width: 90%;
-            height: auto; 
-            max-height: 80vh; 
-            overflow: hidden;
-            position: relative;
-        }
-
         .slider-content {
             display: flex;
             animation: slide 20s infinite;
@@ -211,7 +185,7 @@
     margin-right: auto;
 }
 
-.square-box .btn {
+.btn {
     color: #000;
     text-align: center;
     padding: 10px;
@@ -219,10 +193,9 @@
     border-image: linear-gradient(to bottom, #4e4eb6, #952fb5);
     border-image-slice: 1;
     flex-grow: 1;
-   
 }
 
-.square-box .btn:hover {
+.btn:hover {
     background-color: #4e4eb6;
     color: #fff;
 }
@@ -340,7 +313,7 @@
 
     <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-7 md:gap-7 justify-items-center mx-5">
         <div class="py-10 hover:scale-110 transform transition-transform duration-500 ease-in-out">
-            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500 flex flex-col">
                 <img src="events-icon/quiz.jpg" alt="" class="w-full">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Quiz-O-Pedia</div>
@@ -349,15 +322,15 @@
                 </div>
 
 
-                <div class="grid grid-flow-col gap-5 pb-2 px-6">
-                    <a href="https://t.insignia-gndu.me/" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</a>
-                    <a href="technical.html#quiz" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</a>
+                <div class="grid grid-flow-col gap-5 px-6 mt-auto pb-8">
+                    <a href="https://t.insignia-gndu.me/" class="btn">Register</a>
+                    <a href="technical.html#quiz" class="btn">Explore</a>
                 </div>
             </div>
         </div>
 
         <div class="py-10 hover:scale-110 transform transition-transform duration-500 ease-in-out">
-            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500 flex flex-col">
                 <img src="events-icon/debate.jpg" alt="" class="w-full">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Tech-Deb
@@ -367,15 +340,15 @@
                 </div>
 
 
-                <div class="grid grid-flow-col gap-5 pb-2 px-6">
-                    <a href="https://t.insignia-gndu.me/" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</a>
-                    <a href="technical.html#tech-deb" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</a>
+                <div class="grid grid-flow-col gap-5 px-6 mt-auto pb-8">
+                    <a href="https://t.insignia-gndu.me/" class="btn">Register</a>
+                    <a href="technical.html#tech-deb" class="btn">Explore</a>
                 </div>
             </div>
         </div>
 
         <div class="py-10 hover:scale-110 transform transition-transform duration-500 ease-in-out">
-            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500 flex flex-col">
                 <img src="events-icon/spin-a-web.jpg" alt="" class="w-full">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Spin a Web
@@ -385,15 +358,15 @@
                 </div>
 
 
-                <div class="grid grid-flow-col gap-5 pb-2 px-6">
-                    <a href="https://t.insignia-gndu.me/" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</a>
-                    <a href="technical.html#spin-a-web" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</a>
+                <div class="grid grid-flow-col gap-5 px-6 mt-auto pb-8">
+                    <a href="https://t.insignia-gndu.me/" class="btn">Register</a>
+                    <a href="technical.html#spin-a-web" class="btn">Explore</a>
                 </div>
             </div>
         </div>
 
         <div class="py-10 hover:scale-110 transform transition-transform duration-500 ease-in-out">
-            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500 flex flex-col">
                 <img src="events-icon/avishkar-anvesha.jpg" alt="" class="w-full">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">AvishkarAnvesha
@@ -404,15 +377,15 @@
                 </div>
 
 
-                <div class="grid grid-flow-col gap-5 pb-2 px-6">
-                    <a href="https://t.insignia-gndu.me/" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</a>
-                    <a href="technical.html#avishkar-anvesha" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</a>
+                <div class="grid grid-flow-col gap-5 px-6 mt-auto pb-8">
+                    <a href="https://t.insignia-gndu.me/" class="btn">Register</a>
+                    <a href="technical.html#avishkar-anvesha" class="btn">Explore</a>
                 </div>
             </div>
         </div>
 
         <div class="py-10 hover:scale-110 transform transition-transform duration-500 ease-in-out">
-            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500 flex flex-col">
                 <img src="events-icon/codecode.jpg" alt="" class="w-full">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Codecode
@@ -422,15 +395,15 @@
                 </div>
 
 
-                <div class="grid grid-flow-col gap-5 pb-2 px-6">
-                    <a href="https://t.insignia-gndu.me/" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</a>
-                    <a href="technical.html#code-code" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</a>
+                <div class="grid grid-flow-col gap-5 px-6 mt-auto pb-8">
+                    <a href="https://t.insignia-gndu.me/" class="btn">Register</a>
+                    <a href="technical.html#code-code" class="btn">Explore</a>
                 </div>
             </div>
         </div>
 
         <div class="py-10 hover:scale-110 transform transition-transform duration-500 ease-in-out">
-            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500 flex flex-col">
                 <img src="events-icon/gaming.jpg" alt="" class="w-full">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">LAN/Mobile Gaming
@@ -440,15 +413,15 @@
                 </div>
 
 
-                <div class="grid grid-flow-col gap-5 pb-2 px-6">
-                    <a href="https://t.insignia-gndu.me/" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</a>
-                    <a href="technical.html#gaming" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</a>
+                <div class="grid grid-flow-col gap-5 px-6 mt-auto pb-8">
+                    <a href="https://t.insignia-gndu.me/" class="btn">Register</a>
+                    <a href="technical.html#gaming" class="btn">Explore</a>
                 </div>
             </div>
         </div>
 
         <div class="py-10 hover:scale-110 transform transition-transform duration-500 ease-in-out">
-            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500 flex flex-col">
                 <img src="events-icon/project.jpg" alt="" class="w-full">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Project Display
@@ -458,15 +431,15 @@
                 </div>
 
 
-                <div class="grid grid-flow-col gap-5 pb-2 px-6">
-                    <a href="https://t.insignia-gndu.me/" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</a>
-                    <a href="technical.html#project-display" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</a>
+                <div class="grid grid-flow-col gap-5 px-6 mt-auto pb-8">
+                    <a href="https://t.insignia-gndu.me/" class="btn">Register</a>
+                    <a href="technical.html#project-display" class="btn">Explore</a>
                 </div>
             </div>
         </div>
 
         <div class="py-10 hover:scale-110 transform transition-transform duration-500 ease-in-out">
-            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500 flex flex-col">
                 <img src="events-icon/electro-hunt.jpg" alt="" class="w-full">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Electro-Hunt
@@ -478,15 +451,15 @@
                 </div>
 
 
-                <div class="grid grid-flow-col gap-5 pb-2 px-6">
-                    <a href="https://t.insignia-gndu.me/" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</a>
-                    <a href="technical.html#electro-hunt" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</a>
+                <div class="grid grid-flow-col gap-5 px-6 mt-auto pb-8">
+                    <a href="https://t.insignia-gndu.me/" class="btn">Register</a>
+                    <a href="technical.html#electro-hunt" class="btn">Explore</a>
                 </div>
             </div>
         </div>
 
         <div class="py-10 hover:scale-110 transform transition-transform duration-500 ease-in-out">
-            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500 flex flex-col">
                 <img src="events-icon/advaganza.jpg" alt="" class="w-full">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Ad-Vaganza
@@ -498,15 +471,15 @@
                 </div>
 
 
-                <div class="grid grid-flow-col gap-5 pb-2 px-6">
-                    <a href="https://t.insignia-gndu.me/" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</a>
-                    <a href="technical.html#ad-vaganza" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</a>
+                <div class="grid grid-flow-col gap-5 px-6 mt-auto pb-8">
+                    <a href="https://t.insignia-gndu.me/" class="btn">Register</a>
+                    <a href="technical.html#ad-vaganza" class="btn">Explore</a>
                 </div>
             </div>
         </div>
 
         <div class="py-10 hover:scale-110 transform transition-transform duration-500 ease-in-out">
-            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500 flex flex-col">
                 <img src="events-icon/shark-tank.jpg" alt="" class="w-full">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Shark Tank
@@ -518,9 +491,9 @@
                 </div>
 
 
-                <div class="grid grid-flow-col gap-5 pb-2 px-6">
-                    <a href="https://t.insignia-gndu.me/" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2" href="index.html">Register</a>
-                    <a href="technical.html#shark-tank" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</a>
+                <div class="grid grid-flow-col gap-5 px-6 mt-auto pb-8">
+                    <a href="https://t.insignia-gndu.me/" class="btn" href="index.html">Register</a>
+                    <a href="technical.html#shark-tank" class="btn">Explore</a>
                 </div>
             </div>
         </div>
@@ -546,7 +519,7 @@
 
     <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-3 md:gap-2 justify-items-center mx-5">
         <div class="py-10 hover:scale-110 transform transition-transform duration-500 ease-in-out hover:drop-shadow-lg">
-            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500 flex flex-col">
                 <img src="events-icon/aaja-nachle.jpg" alt="" class="w-full">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Aaja Nachle</div>
@@ -557,15 +530,15 @@
                 </div>
 
 
-                <div class="grid grid-flow-col gap-5 pb-2 px-6">
-                    <a href="https://t.insignia-gndu.me/" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</a>
-                    <a href="cultural.html#aaja-nachle" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</a>
+                <div class="grid grid-flow-col gap-5 px-6 mt-auto pb-8">
+                    <a href="https://t.insignia-gndu.me/" class="btn">Register</a>
+                    <a href="cultural.html#aaja-nachle" class="btn">Explore</a>
                 </div>
             </div>
         </div>
 
         <div class="py-10 hover:scale-110 transform transition-transform duration-500 ease-in-out">
-            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500 flex flex-col">
                 <img src="events-icon/saregama.jpg" alt="" class="w-full">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">SAREGAMA
@@ -575,15 +548,15 @@
                 </div>
 
 
-                <div class="grid grid-flow-col gap-5 pb-2 px-6">
-                    <a href="https://t.insignia-gndu.me/" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2" href="index.html">Register</a>
-                    <a href="cultural.html#saregama" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</a>
+                <div class="grid grid-flow-col gap-5 px-6 mt-auto pb-8">
+                    <a href="https://t.insignia-gndu.me/" class="btn" href="index.html">Register</a>
+                    <a href="cultural.html#saregama" class="btn">Explore</a>
                 </div>
             </div>
         </div>
 
         <div class="py-10 hover:scale-110 transform transition-transform duration-500 ease-in-out">
-            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500 flex flex-col">
                 <img src="events-icon/rangmanch.jpg" alt="" class="w-full">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Rangmanch
@@ -593,15 +566,15 @@
                 </div>
 
 
-                <div class="grid grid-flow-col gap-5 pb-2 px-6">
-                    <a href="https://t.insignia-gndu.me/" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</a>
-                    <a href="cultural.html#rangmanch" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</a>
+                <div class="grid grid-flow-col gap-5 px-6 mt-auto pb-8">
+                    <a href="https://t.insignia-gndu.me/" class="btn">Register</a>
+                    <a href="cultural.html#rangmanch" class="btn">Explore</a>
                 </div>
             </div>
         </div>
 
         <div class="py-10 hover:scale-110 transform transition-transform duration-500 ease-in-out">
-            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500 flex flex-col">
                 <img src="events-icon/Reels-Recursive.jpg" alt="" class="w-full">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Reels Recursive
@@ -611,15 +584,15 @@
                 </div>
 
 
-                <div class="grid grid-flow-col gap-5 pb-2 px-6">
-                    <a href="https://t.insignia-gndu.me/" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</a>
-                    <a href="cultural.html#reels" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</a>
+                <div class="grid grid-flow-col gap-5 px-6 mt-auto pb-8">
+                    <a href="https://t.insignia-gndu.me/" class="btn">Register</a>
+                    <a href="cultural.html#reels" class="btn">Explore</a>
                 </div>
             </div>
         </div>
 
         <div class="py-10 hover:scale-110 transform transition-transform duration-500 ease-in-out">
-            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500 flex flex-col">
                 <img src="events-icon/photography.jpg" alt="" class="w-full">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Captured Moments
@@ -631,15 +604,15 @@
                 </div>
 
 
-                <div class="grid grid-flow-col gap-5 pb-2 px-6">
-                    <a href="https://t.insignia-gndu.me/" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</a>
-                    <a href="cultural.html#photography" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</a>
+                <div class="grid grid-flow-col gap-5 px-6 mt-auto pb-8">
+                    <a href="https://t.insignia-gndu.me/" class="btn">Register</a>
+                    <a href="cultural.html#photography" class="btn">Explore</a>
                 </div>
             </div>
         </div>
 
         <div class="py-10 hover:scale-110 transform transition-transform duration-500 ease-in-out">
-            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500 flex flex-col">
                 <img src="events-icon/cinematography.jpg" alt="" class="w-full">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Cinematic Visions
@@ -651,15 +624,15 @@
                 </div>
 
 
-                <div class="grid grid-flow-col gap-5 pb-2 px-6">
-                    <a href="https://t.insignia-gndu.me/" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</a>
-                    <a href="cultural.html#cinematography" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</a>
+                <div class="grid grid-flow-col gap-5 px-6 mt-auto pb-8">
+                    <a href="https://t.insignia-gndu.me/" class="btn">Register</a>
+                    <a href="cultural.html#cinematography" class="btn">Explore</a>
                 </div>
             </div>
         </div>
 
         <div class="py-10 hover:scale-110 transform transition-transform duration-500 ease-in-out">
-            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500 flex flex-col">
                 <img src="events-icon/Fashionista.jpg" alt="" class="w-full">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Fashionista
@@ -669,9 +642,9 @@
                 </div>
 
 
-                <div class="grid grid-flow-col gap-5 pb-2 px-6">
-                    <a href="https://t.insignia-gndu.me/" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</a>
-                    <a href="cultural.html#fashionista" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</a>
+                <div class="grid grid-flow-col gap-5 px-6 mt-auto pb-8">
+                    <a href="https://t.insignia-gndu.me/" class="btn">Register</a>
+                    <a href="cultural.html#fashionista" class="btn">Explore</a>
                 </div>
             </div>
         </div>
@@ -680,7 +653,7 @@
                  
 
         <div class="py-10 hover:scale-110 transform transition-transform duration-500 ease-in-out">
-            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500 flex flex-col">
                 <img src="events-icon/comedy.jpg" alt="" class="w-full">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Comic Chronicles
@@ -690,9 +663,9 @@
                 </div>
 
 
-                <div class="grid grid-flow-col gap-5 pb-2 px-6">
-                    <a href="https://t.insignia-gndu.me/" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</a>
-                    <a href="cultural.html#comedy" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</a>
+                <div class="grid grid-flow-col gap-5 px-6 mt-auto pb-8">
+                    <a href="https://t.insignia-gndu.me/" class="btn">Register</a>
+                    <a href="cultural.html#comedy" class="btn">Explore</a>
                 </div>
             </div>
         </div>
@@ -716,7 +689,7 @@
 
     <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-3 md:gap-2 justify-items-center mx-5">
         <div class="py-10 hover:scale-110 transform transition-transform duration-500 ease-in-out hover:drop-shadow-lg">
-            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500 flex flex-col">
                 <img src="events-icon/Treasure-hunt.jpg" alt="" class="w-full">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Treasure Hunt
@@ -726,15 +699,15 @@
                 </div>
 
 
-                <div class="grid grid-flow-col gap-5 pb-2 px-6">
-                    <a href="https://t.insignia-gndu.me/" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</a>
-                    <a href="fun.html#treasure-hunt" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</a>
+                <div class="grid grid-flow-col gap-5 px-6 mt-auto pb-8">
+                    <a href="https://t.insignia-gndu.me/" class="btn">Register</a>
+                    <a href="fun.html#treasure-hunt" class="btn">Explore</a>
                 </div>
             </div>
         </div>
 
         <div class="py-10 hover:scale-110 transform transition-transform duration-500 ease-in-out">
-            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500 flex flex-col">
                 <img src="events-icon/Box-cricket.jpg" alt="" class="w-full">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Box Cricket Showdown
@@ -744,15 +717,15 @@
                 </div>
 
 
-                <div class="grid grid-flow-col gap-5 pb-2 px-6">
-                    <a href="https://t.insignia-gndu.me/" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</a>
-                    <a href="fun.html#box-cricket" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</a>
+                <div class="grid grid-flow-col gap-5 px-6 mt-auto pb-8">
+                    <a href="https://t.insignia-gndu.me/" class="btn">Register</a>
+                    <a href="fun.html#box-cricket" class="btn">Explore</a>
                 </div>
             </div>
         </div>
 
         <div class="py-10 hover:scale-110 transform transition-transform duration-500 ease-in-out">
-            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500 flex flex-col">
                 <img src="events-icon/headphone.jpg" alt="" class="w-full">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Headphone Whisper
@@ -762,15 +735,15 @@
                 </div>
 
 
-                <div class="grid grid-flow-col gap-5 pb-2 px-6">
-                    <a href="https://t.insignia-gndu.me/" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</a>
-                    <a href="fun.html#headphone" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</a>
+                <div class="grid grid-flow-col gap-5 px-6 mt-auto pb-8">
+                    <a href="https://t.insignia-gndu.me/" class="btn">Register</a>
+                    <a href="fun.html#headphone" class="btn">Explore</a>
                 </div>
             </div>
         </div>
 
         <div class="py-10 hover:scale-110 transform transition-transform duration-500 ease-in-out">
-            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500 flex flex-col">
                 <img src="events-icon/bollywood-hungama.jpg" alt="" class="w-full">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Bollywood Hungama
@@ -780,15 +753,15 @@
                 </div>
 
 
-                <div class="grid grid-flow-col gap-5 pb-2 px-6">
-                    <a href="https://t.insignia-gndu.me/" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</a>
-                    <a href="fun.html#bollywood" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</a>
+                <div class="grid grid-flow-col gap-5 px-6 mt-auto pb-8">
+                    <a href="https://t.insignia-gndu.me/" class="btn">Register</a>
+                    <a href="fun.html#bollywood" class="btn">Explore</a>
                 </div>
             </div>
         </div>
 
         <div class="py-10 hover:scale-110 transform transition-transform duration-500 ease-in-out">
-            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500 flex flex-col">
                 <img src="events-icon/caption-star.jpg" alt="" class="w-full">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Caption Star
@@ -798,15 +771,15 @@
                 </div>
 
 
-                <div class="grid grid-flow-col gap-5 pb-2 px-6">
-                    <a href="https://t.insignia-gndu.me/" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</a>
-                    <a href="fun.html#caption-star" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</a>
+                <div class="grid grid-flow-col gap-5 px-6 mt-auto pb-8">
+                    <a href="https://t.insignia-gndu.me/" class="btn btn">Register</a>
+                    <a href="fun.html#caption-star" class="btn btn">Explore</a>
                 </div>
             </div>
         </div>
 
         <div class="py-10 hover:scale-110 transform transition-transform duration-500 ease-in-out">
-            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500">
+            <div class="rounded overflow-hidden shadow-lg max-w-sm h-full hover:drop-shadow-xl duration-500 flex flex-col">
                 <img src="events-icon/paper-dance.jpg" alt="" class="w-full">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Paper Dance
@@ -816,9 +789,9 @@
                 </div>
 
 
-                <div class="grid grid-flow-col gap-5 pb-2 px-6">
-                    <a href="https://t.insignia-gndu.me/" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Register</a>
-                    <a href="fun.html#paper-dance" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-base mb-2">Explore</a>
+                <div class="grid grid-flow-col gap-5 pb-10 px-6">
+                    <a href="https://t.insignia-gndu.me/" class="btn btn">Register</a>
+                    <a href="fun.html#paper-dance" class="btn btn">Explore</a>
                 </div>
             </div>
         </div>
